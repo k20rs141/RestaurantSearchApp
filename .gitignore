@@ -34,3 +34,6 @@ Carthage/Build/
 xcuserdata/
 *.moved-aside
 !.gitkeep
+
+# ホットペッパーAPIキーのファイル
+RestaurantSearchApp/RestaurantSearchApp/APIKey.swift
