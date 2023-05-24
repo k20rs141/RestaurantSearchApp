@@ -10,21 +10,25 @@ struct Results: Codable {
 }
 
 struct Shop: Codable {
-    let access: String
-    let address: String
-    let mobile_access: String
     let name: String
-    let logo_image: URL?
-    let photo: Photos
+    let logoImage: URL?
+    let address: String
+    let genre: Genre
+    let mobileAccess: String
+    let photo: Photos?
     
     enum CodingKeys: String, CodingKey {
-        case address
-        case access
-        case mobile_access
         case name
-        case logo_image
+        case logoImage = "logo_image"
+        case address
+        case genre
+        case mobileAccess = "mobile_access"
         case photo
     }
+}
+
+struct Genre: Codable {
+    let name: String
 }
 
 struct Photos: Codable {
@@ -32,8 +36,8 @@ struct Photos: Codable {
 }
 
 struct PhotoSize: Codable {
-    let l: String
-    let s: String
+    let l: String?
+    let s: String?
 }
 
 struct Errors: Codable {

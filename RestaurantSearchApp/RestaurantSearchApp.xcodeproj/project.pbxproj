@@ -13,6 +13,10 @@
 		9F17B44E2A17AFA3005B2262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F17B44C2A17AFA3005B2262 /* Main.storyboard */; };
 		9F17B4502A17AFA4005B2262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F17B44F2A17AFA4005B2262 /* Assets.xcassets */; };
 		9F17B4532A17AFA4005B2262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F17B4512A17AFA4005B2262 /* LaunchScreen.storyboard */; };
+		9F17B4672A191413005B2262 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B4662A191413005B2262 /* APIKey.swift */; };
+		9F17B4692A1B3081005B2262 /* HotPepperAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */; };
+		9F17B46B2A1B3477005B2262 /* GourmetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */; };
+		9F17B46D2A1B3CF6005B2262 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B46C2A1B3CF6005B2262 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9F17B44F2A17AFA4005B2262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F17B4522A17AFA4005B2262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F17B4542A17AFA4005B2262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F17B4662A191413005B2262 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPepperAPIService.swift; sourceTree = "<group>"; };
+		9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetResponse.swift; sourceTree = "<group>"; };
+		9F17B46C2A1B3CF6005B2262 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				9F17B4462A17AFA3005B2262 /* AppDelegate.swift */,
 				9F17B4482A17AFA3005B2262 /* SceneDelegate.swift */,
 				9F17B44A2A17AFA3005B2262 /* ViewController.swift */,
+				9F17B4662A191413005B2262 /* APIKey.swift */,
+				9F17B46C2A1B3CF6005B2262 /* APIError.swift */,
+				9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */,
+				9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */,
 				9F17B44C2A17AFA3005B2262 /* Main.storyboard */,
 				9F17B44F2A17AFA4005B2262 /* Assets.xcassets */,
 				9F17B4512A17AFA4005B2262 /* LaunchScreen.storyboard */,
@@ -140,7 +152,11 @@
 			files = (
 				9F17B44B2A17AFA3005B2262 /* ViewController.swift in Sources */,
 				9F17B4472A17AFA3005B2262 /* AppDelegate.swift in Sources */,
+				9F17B4672A191413005B2262 /* APIKey.swift in Sources */,
+				9F17B4692A1B3081005B2262 /* HotPepperAPIService.swift in Sources */,
+				9F17B46B2A1B3477005B2262 /* GourmetResponse.swift in Sources */,
 				9F17B4492A17AFA3005B2262 /* SceneDelegate.swift in Sources */,
+				9F17B46D2A1B3CF6005B2262 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
