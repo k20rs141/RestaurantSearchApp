@@ -9,17 +9,17 @@ final class HotPepperAPIService {
         }
 
         do {
-            let (data, urlResponse) = try await URLSession.shared.data(from: url)
-            guard let httpStatus = urlResponse as? HTTPURLResponse else {
-                throw APIError.invalidURL
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard let httpStatus = response as? HTTPURLResponse else {
+                throw APIError.invalidResponse
             }
 
             switch httpStatus.statusCode {
                 case 200:
-                    let response = try JSONDecoder().decode(Gourmet.self, from: data)
-                    return response
+                    let gourmet = try JSONDecoder().decode(Gourmet.self, from: data)
+                    return gourmet
                 default:
-                    throw APIError.invalidResponse
+                    throw APIError.invalidData
             }
         } catch {
             throw APIError.invalidData
