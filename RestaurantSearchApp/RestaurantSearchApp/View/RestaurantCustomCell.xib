@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCustomCell" rowHeight="201" id="jKg-qg-Wh8" customClass="RestaurantCustomCell" customModule="RestaurantSearchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jKg-qg-Wh8" id="EhP-rv-3bX">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="201"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="exc-6U-3RK" userLabel="Shop Image View">
+                        <rect key="frame" x="0.0" y="0.0" width="268.66666666666669" height="168"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="exc-6U-3RK" secondAttribute="height" multiplier="8:5" id="6Qf-Yi-n3W"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-nQ-6hd">
+                        <rect key="frame" x="0.0" y="168" width="268.66666666666669" height="72"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-S3-Kz4" userLabel="Shop Name Label">
+                                <rect key="frame" x="0.0" y="0.0" width="268.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="寿司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ue2-vd-Ejz" userLabel="Genre Label">
+                                <rect key="frame" x="0.0" y="25.166666666666707" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fRy-IT-eCp" userLabel="Access Label">
+                                <rect key="frame" x="0.0" y="51.000000000000043" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="exc-6U-3RK" firstAttribute="leading" secondItem="EhP-rv-3bX" secondAttribute="leading" id="D0R-UZ-vud"/>
+                    <constraint firstItem="mgf-nQ-6hd" firstAttribute="top" secondItem="exc-6U-3RK" secondAttribute="bottom" id="HE2-jX-SPT"/>
+                    <constraint firstAttribute="trailing" secondItem="mgf-nQ-6hd" secondAttribute="trailing" id="OWH-Sv-VdB"/>
+                    <constraint firstItem="exc-6U-3RK" firstAttribute="top" secondItem="EhP-rv-3bX" secondAttribute="top" id="THb-Ce-vRM"/>
+                    <constraint firstItem="mgf-nQ-6hd" firstAttribute="leading" secondItem="EhP-rv-3bX" secondAttribute="leading" id="VKq-ad-Yzw"/>
+                    <constraint firstItem="exc-6U-3RK" firstAttribute="centerX" secondItem="mgf-nQ-6hd" secondAttribute="centerX" id="VcL-Se-FqH"/>
+                    <constraint firstItem="exc-6U-3RK" firstAttribute="height" secondItem="EhP-rv-3bX" secondAttribute="height" multiplier="0.7" id="nVg-zf-uaR"/>
+                    <constraint firstAttribute="trailing" secondItem="exc-6U-3RK" secondAttribute="trailing" id="nZI-Nt-bgV"/>
+                    <constraint firstAttribute="bottom" secondItem="mgf-nQ-6hd" secondAttribute="bottom" id="pf2-5E-W6a"/>
+                    <constraint firstItem="mgf-nQ-6hd" firstAttribute="height" secondItem="EhP-rv-3bX" secondAttribute="height" multiplier="0.3" id="uw2-M5-sdJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accessLabel" destination="fRy-IT-eCp" id="rYF-ag-mT7"/>
+                <outlet property="genreLabel" destination="ue2-vd-Ejz" id="LyX-a3-TOp"/>
+                <outlet property="shopImageView" destination="exc-6U-3RK" id="DMV-Nr-nOA"/>
+                <outlet property="shopNameLabel" destination="Bff-S3-Kz4" id="d4V-bL-tgq"/>
+            </connections>
+            <point key="canvasLocation" x="-209.92366412213741" y="-321.47887323943661"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="baseline.jpeg" width="450" height="300"/>
+    </resources>
+</document>
