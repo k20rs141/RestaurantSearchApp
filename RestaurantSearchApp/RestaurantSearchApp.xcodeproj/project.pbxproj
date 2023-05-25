@@ -17,6 +17,13 @@
 		9F17B4692A1B3081005B2262 /* HotPepperAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */; };
 		9F17B46B2A1B3477005B2262 /* GourmetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */; };
 		9F17B46D2A1B3CF6005B2262 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B46C2A1B3CF6005B2262 /* APIError.swift */; };
+		9F17B46F2A1C729D005B2262 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B46E2A1C729D005B2262 /* LocationManager.swift */; };
+		9F17B4752A1CAE12005B2262 /* RestaurantCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B4742A1CAE12005B2262 /* RestaurantCustomCell.swift */; };
+		9F17B4782A1CAE4B005B2262 /* RestaurantCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F17B4772A1CAE4B005B2262 /* RestaurantCustomCell.xib */; };
+		9F17B47B2A1E6C38005B2262 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47A2A1E6C38005B2262 /* Nuke */; };
+		9F17B47D2A1E6C38005B2262 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47C2A1E6C38005B2262 /* NukeExtensions */; };
+		9F17B47F2A1E6C38005B2262 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47E2A1E6C38005B2262 /* NukeUI */; };
+		9FF0FE992A1FAE8C00280699 /* UIAlertControllerswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FE982A1FAE8C00280699 /* UIAlertControllerswift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,10 @@
 		9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPepperAPIService.swift; sourceTree = "<group>"; };
 		9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetResponse.swift; sourceTree = "<group>"; };
 		9F17B46C2A1B3CF6005B2262 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9F17B46E2A1C729D005B2262 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9F17B4742A1CAE12005B2262 /* RestaurantCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCustomCell.swift; sourceTree = "<group>"; };
+		9F17B4772A1CAE4B005B2262 /* RestaurantCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCustomCell.xib; sourceTree = "<group>"; };
+		9FF0FE982A1FAE8C00280699 /* UIAlertControllerswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerswift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F17B47F2A1E6C38005B2262 /* NukeUI in Frameworks */,
+				9F17B47B2A1E6C38005B2262 /* Nuke in Frameworks */,
+				9F17B47D2A1E6C38005B2262 /* NukeExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,19 +78,47 @@
 		9F17B4452A17AFA3005B2262 /* RestaurantSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				9F17B4702A1CAD58005B2262 /* Model */,
+				9F17B4712A1CAD61005B2262 /* View */,
+				9F17B4732A1CAD94005B2262 /* Storyboard */,
+				9FF0FE982A1FAE8C00280699 /* UIAlertControllerswift.swift */,
 				9F17B4462A17AFA3005B2262 /* AppDelegate.swift */,
 				9F17B4482A17AFA3005B2262 /* SceneDelegate.swift */,
-				9F17B44A2A17AFA3005B2262 /* ViewController.swift */,
 				9F17B4662A191413005B2262 /* APIKey.swift */,
-				9F17B46C2A1B3CF6005B2262 /* APIError.swift */,
-				9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */,
-				9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */,
-				9F17B44C2A17AFA3005B2262 /* Main.storyboard */,
 				9F17B44F2A17AFA4005B2262 /* Assets.xcassets */,
 				9F17B4512A17AFA4005B2262 /* LaunchScreen.storyboard */,
 				9F17B4542A17AFA4005B2262 /* Info.plist */,
 			);
 			path = RestaurantSearchApp;
+			sourceTree = "<group>";
+		};
+		9F17B4702A1CAD58005B2262 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F17B46C2A1B3CF6005B2262 /* APIError.swift */,
+				9F17B46E2A1C729D005B2262 /* LocationManager.swift */,
+				9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */,
+				9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F17B4712A1CAD61005B2262 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F17B44A2A17AFA3005B2262 /* ViewController.swift */,
+				9F17B4742A1CAE12005B2262 /* RestaurantCustomCell.swift */,
+				9F17B4772A1CAE4B005B2262 /* RestaurantCustomCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F17B4732A1CAD94005B2262 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F17B44C2A17AFA3005B2262 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +137,11 @@
 			dependencies = (
 			);
 			name = RestaurantSearchApp;
+			packageProductDependencies = (
+				9F17B47A2A1E6C38005B2262 /* Nuke */,
+				9F17B47C2A1E6C38005B2262 /* NukeExtensions */,
+				9F17B47E2A1E6C38005B2262 /* NukeUI */,
+			);
 			productName = RestaurantSearchApp;
 			productReference = 9F17B4432A17AFA3005B2262 /* RestaurantSearchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 9F17B43A2A17AFA3005B2262;
+			packageReferences = (
+				9F17B4792A1E6C38005B2262 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 9F17B4442A17AFA3005B2262 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F17B4532A17AFA4005B2262 /* LaunchScreen.storyboard in Resources */,
+				9F17B4782A1CAE4B005B2262 /* RestaurantCustomCell.xib in Resources */,
 				9F17B4502A17AFA4005B2262 /* Assets.xcassets in Resources */,
 				9F17B44E2A17AFA3005B2262 /* Main.storyboard in Resources */,
 			);
@@ -150,10 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0FE992A1FAE8C00280699 /* UIAlertControllerswift.swift in Sources */,
 				9F17B44B2A17AFA3005B2262 /* ViewController.swift in Sources */,
 				9F17B4472A17AFA3005B2262 /* AppDelegate.swift in Sources */,
 				9F17B4672A191413005B2262 /* APIKey.swift in Sources */,
 				9F17B4692A1B3081005B2262 /* HotPepperAPIService.swift in Sources */,
+				9F17B46F2A1C729D005B2262 /* LocationManager.swift in Sources */,
+				9F17B4752A1CAE12005B2262 /* RestaurantCustomCell.swift in Sources */,
 				9F17B46B2A1B3477005B2262 /* GourmetResponse.swift in Sources */,
 				9F17B4492A17AFA3005B2262 /* SceneDelegate.swift in Sources */,
 				9F17B46D2A1B3CF6005B2262 /* APIError.swift in Sources */,
@@ -306,6 +360,8 @@
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearchApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "近くのお店を探すのに位置情報を使用します。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "近くのお店を探すのに位置情報を使用します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,6 +390,8 @@
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearchApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "近くのお店を探すのに位置情報を使用します。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "近くのお店を探すのに位置情報を使用します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -374,6 +432,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F17B4792A1E6C38005B2262 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F17B47A2A1E6C38005B2262 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F17B4792A1E6C38005B2262 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		9F17B47C2A1E6C38005B2262 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F17B4792A1E6C38005B2262 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		9F17B47E2A1E6C38005B2262 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F17B4792A1E6C38005B2262 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F17B43B2A17AFA3005B2262 /* Project object */;
 }
