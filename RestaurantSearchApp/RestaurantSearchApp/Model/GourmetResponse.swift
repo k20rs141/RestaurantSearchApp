@@ -36,8 +36,13 @@ struct Photos: Codable {
 }
 
 struct PhotoSize: Codable {
-    let l: String?
-    let s: String?
+    let large: String?
+    let small: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case large = "l"
+        case small = "s"
+    }
 }
 
 struct Errors: Codable {
