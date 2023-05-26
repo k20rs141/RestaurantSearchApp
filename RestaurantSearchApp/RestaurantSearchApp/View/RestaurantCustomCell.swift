@@ -10,7 +10,7 @@ class RestaurantCustomCell: UITableViewCell {
     var shop: Shop? {
         didSet {
             Task {
-                guard let url = URL(string: shop?.photo?.mobile.l ?? "N/A") else { return }
+                guard let url = URL(string: shop?.photo?.mobile.large ?? "N/A") else { return }
                 let image = try await ImagePipeline.shared.image(for: url)
                 DispatchQueue.main.async {
                     self.shopImageView.image = image
