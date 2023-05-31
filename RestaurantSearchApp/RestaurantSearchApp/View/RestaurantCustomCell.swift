@@ -5,6 +5,7 @@ class RestaurantCustomCell: UITableViewCell {
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var accessLabel: UILabel!
     
     var shop: Shop? {
@@ -17,8 +18,9 @@ class RestaurantCustomCell: UITableViewCell {
                 }
             }
             shopNameLabel.text = shop?.name
-            accessLabel.text = shop?.mobileAccess
             genreLabel.text = shop?.genre.name
+            budgetLabel.text = shop?.budget.name
+            accessLabel.text = shop?.mobileAccess
         }
     }
     
