@@ -29,11 +29,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "RestaurantCustomCell", bundle: nil), forCellReuseIdentifier: "RestaurantCustomCell")
-            self.navigationController?.navigationBar.isHidden = true
-                self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+            tableView.refreshControl = UIRefreshControl()
+            tableView.refreshControl?.addTarget(self, action: #selector(self.handleRefreshControl), for: .valueChanged)
         }
     }
-    
+
     enum Constants {
         static let baseURL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key="
     }
@@ -46,8 +46,10 @@ class ViewController: UIViewController {
         searchText.delegate = self
         checkAuthorizationStatus()
         fetchGourmet()
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
-    
+
     private func fetchGourmet() {
         var gourmetSearchURL = ""
         // 予約文字をエンコード
@@ -58,12 +60,13 @@ class ViewController: UIViewController {
             gourmetSearchURL = Constants.baseURL + apiKey + "&lat=35.68944&lng=139.69167&keyword=\(encodeSearchWord)&range=\(range)&count=50&format=json"
         }
         print(gourmetSearchURL)
+
         Task {
             do {
                 let response = try await HotPepperAPIService.shared.request(with: gourmetSearchURL)
                 if let shops = response.results.shop {
                     if shops.count == 0 {
-
+                        present(.showAPIErrorAlert(title: "検索結果が0件です", message: ""))
                     } else {
                         DispatchQueue.main.async {
                             self.shops = shops
@@ -83,6 +86,11 @@ class ViewController: UIViewController {
             print("test: \(locationManager.denied)")
             present(.showLocationAlert(title: "位置情報をオンにして下さい", message: "位置情報を利用して店舗検索を行います。設定から位置情報の許可をお願いします。"))
         }
+    }
+
+    @objc func handleRefreshControl() {
+        fetchGourmet()
+        tableView.refreshControl?.endRefreshing()
     }
 }
 
@@ -104,7 +112,6 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.shop = shops[indexPath.section]
-
         return cell
     }
 }
