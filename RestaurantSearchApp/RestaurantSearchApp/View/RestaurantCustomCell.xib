@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +23,7 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-nQ-6hd">
-                        <rect key="frame" x="10" y="168.33333333333334" width="282" height="100.00000000000003"/>
+                        <rect key="frame" x="10" y="168.33333333333337" width="282" height="131.66666666666663"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="味の大丸 新世界店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-S3-Kz4" userLabel="Shop Name Label">
                                 <rect key="frame" x="0.0" y="0.0" width="282" height="40"/>
@@ -39,17 +40,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azn-ON-ieF" userLabel="Genre View">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="20"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fork.knife.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="phO-HL-WLv">
-                                                <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.666666666666664"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="phO-HL-WLv">
+                                                <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="17"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="LMl-5D-FKs"/>
                                                     <constraint firstAttribute="width" constant="20" id="WOd-N8-DjP"/>
                                                 </constraints>
+                                                <imageReference key="image" image="fork.knife" catalog="system" symbolScale="small"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="居酒屋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGX-7u-fJz" userLabel="Genre Label">
-                                                <rect key="frame" x="25" y="0.0" width="37" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <rect key="frame" x="20" y="0.0" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -59,35 +61,34 @@
                                             <constraint firstItem="aGX-7u-fJz" firstAttribute="top" secondItem="azn-ON-ieF" secondAttribute="top" id="1XU-Bc-qiO"/>
                                             <constraint firstAttribute="trailing" secondItem="aGX-7u-fJz" secondAttribute="trailing" id="JN2-BF-9JM"/>
                                             <constraint firstAttribute="bottom" secondItem="aGX-7u-fJz" secondAttribute="bottom" id="LgQ-sq-WML"/>
-                                            <constraint firstAttribute="bottom" secondItem="phO-HL-WLv" secondAttribute="bottom" id="W2b-KW-M0X"/>
-                                            <constraint firstItem="aGX-7u-fJz" firstAttribute="leading" secondItem="phO-HL-WLv" secondAttribute="trailing" constant="5" id="hkx-tw-l9R"/>
-                                            <constraint firstItem="phO-HL-WLv" firstAttribute="top" secondItem="azn-ON-ieF" secondAttribute="top" id="s9P-ra-x7c"/>
+                                            <constraint firstItem="aGX-7u-fJz" firstAttribute="leading" secondItem="phO-HL-WLv" secondAttribute="trailing" id="hkx-tw-l9R"/>
+                                            <constraint firstItem="phO-HL-WLv" firstAttribute="centerY" secondItem="azn-ON-ieF" secondAttribute="centerY" id="iWY-2V-kte"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQ9-rT-SEh" userLabel="Budget View">
                                         <rect key="frame" x="62" y="0.0" width="220" height="20"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yensign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HzG-xM-0C2">
-                                                <rect key="frame" x="10" y="0.99999999999999822" width="20" height="18.666666666666664"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HzG-xM-0C2">
+                                                <rect key="frame" x="15" y="2.9999999999999991" width="20" height="14"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="DQi-bn-jjP"/>
                                                     <constraint firstAttribute="height" constant="20" id="a1W-Y5-IPe"/>
                                                 </constraints>
+                                                <imageReference key="image" image="yensign" catalog="system" symbolScale="small"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000円〜3000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI0-0n-iv8" userLabel="Budget Label">
-                                                <rect key="frame" x="35" y="0.0" width="97" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <rect key="frame" x="34.999999999999993" y="0.0" width="104.33333333333331" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="HzG-xM-0C2" firstAttribute="top" secondItem="IQ9-rT-SEh" secondAttribute="top" id="1gv-95-6r8"/>
-                                            <constraint firstItem="HzG-xM-0C2" firstAttribute="leading" secondItem="IQ9-rT-SEh" secondAttribute="leading" constant="10" id="4dD-3N-yhc"/>
-                                            <constraint firstAttribute="bottom" secondItem="HzG-xM-0C2" secondAttribute="bottom" id="LV8-KG-B0D"/>
+                                            <constraint firstItem="HzG-xM-0C2" firstAttribute="leading" secondItem="IQ9-rT-SEh" secondAttribute="leading" constant="15" id="4dD-3N-yhc"/>
                                             <constraint firstItem="FI0-0n-iv8" firstAttribute="top" secondItem="IQ9-rT-SEh" secondAttribute="top" id="MWP-GT-NnJ"/>
-                                            <constraint firstItem="FI0-0n-iv8" firstAttribute="leading" secondItem="HzG-xM-0C2" secondAttribute="trailing" constant="5" id="Z8E-hU-3ks"/>
+                                            <constraint firstItem="FI0-0n-iv8" firstAttribute="leading" secondItem="HzG-xM-0C2" secondAttribute="trailing" id="Z8E-hU-3ks"/>
+                                            <constraint firstItem="HzG-xM-0C2" firstAttribute="centerY" secondItem="IQ9-rT-SEh" secondAttribute="centerY" id="l7X-pd-X4u"/>
                                             <constraint firstAttribute="bottom" secondItem="FI0-0n-iv8" secondAttribute="bottom" id="lJN-yL-GFj"/>
                                         </constraints>
                                     </view>
@@ -97,23 +98,25 @@
                                     <constraint firstItem="IQ9-rT-SEh" firstAttribute="leading" secondItem="azn-ON-ieF" secondAttribute="trailing" id="215-A5-xwV"/>
                                     <constraint firstAttribute="trailing" secondItem="IQ9-rT-SEh" secondAttribute="trailing" id="YPA-Kz-qbp"/>
                                     <constraint firstItem="azn-ON-ieF" firstAttribute="leading" secondItem="U70-TI-A7c" secondAttribute="leading" id="jKT-DV-ctl"/>
+                                    <constraint firstAttribute="height" constant="20" id="l8G-Fg-Mdt"/>
                                     <constraint firstItem="azn-ON-ieF" firstAttribute="centerY" secondItem="U70-TI-A7c" secondAttribute="centerY" id="qe2-TA-E7X"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TY1-86-88W" userLabel="Access View">
-                                <rect key="frame" x="0.0" y="60" width="282" height="40"/>
+                                <rect key="frame" x="0.0" y="60.000000000000007" width="282" height="71.666666666666686"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j4p-ag-H3d">
-                                        <rect key="frame" x="0.0" y="10.999999999999998" width="20" height="18.666666666666664"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j4p-ag-H3d">
+                                        <rect key="frame" x="0.0" y="28" width="20" height="16"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="Kb0-yp-IbK"/>
                                             <constraint firstAttribute="height" constant="20" id="Y0z-sX-raR"/>
                                         </constraints>
+                                        <imageReference key="image" image="mappin" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUE-fz-TTk" userLabel="Access Label">
-                                        <rect key="frame" x="25" y="0.0" width="257" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="25" y="0.0" width="257" height="71.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -122,7 +125,6 @@
                                     <constraint firstAttribute="bottom" secondItem="rUE-fz-TTk" secondAttribute="bottom" id="GYW-kR-w8R"/>
                                     <constraint firstAttribute="trailing" secondItem="rUE-fz-TTk" secondAttribute="trailing" id="H5b-cF-boE"/>
                                     <constraint firstItem="rUE-fz-TTk" firstAttribute="leading" secondItem="j4p-ag-H3d" secondAttribute="trailing" constant="5" id="NO8-D5-X5i"/>
-                                    <constraint firstAttribute="height" constant="40" id="NmD-cw-YfM"/>
                                     <constraint firstItem="j4p-ag-H3d" firstAttribute="centerY" secondItem="TY1-86-88W" secondAttribute="centerY" id="efc-oJ-2CI"/>
                                     <constraint firstItem="j4p-ag-H3d" firstAttribute="leading" secondItem="TY1-86-88W" secondAttribute="leading" id="ugy-8P-HgK"/>
                                     <constraint firstItem="rUE-fz-TTk" firstAttribute="top" secondItem="TY1-86-88W" secondAttribute="top" id="wzG-BH-Wil"/>
@@ -143,13 +145,14 @@
                         </constraints>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU6-fa-kSe" userLabel="Bookmark Button">
-                        <rect key="frame" x="255.66666666666666" y="0.0" width="46.333333333333343" height="46.333333333333336"/>
+                        <rect key="frame" x="255" y="0.0" width="47" height="47"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tU6-fa-kSe" secondAttribute="height" multiplier="1:1" id="smj-ag-ELZ"/>
                         </constraints>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
                     </button>
@@ -178,9 +181,9 @@
     </objects>
     <resources>
         <image name="bookmark" catalog="system" width="110" height="128"/>
-        <image name="fork.knife.circle" catalog="system" width="128" height="123"/>
-        <image name="mappin.circle" catalog="system" width="128" height="123"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
+        <image name="mappin" catalog="system" width="106" height="128"/>
         <image name="test" width="168" height="168"/>
-        <image name="yensign.circle" catalog="system" width="128" height="123"/>
+        <image name="yensign" catalog="system" width="113" height="128"/>
     </resources>
 </document>
