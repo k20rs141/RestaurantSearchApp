@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="302" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="exc-6U-3RK" userLabel="Shop Image View">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="exc-6U-3RK" userLabel="Shop Image View">
                         <rect key="frame" x="0.0" y="0.0" width="302" height="168.33333333333334"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="exc-6U-3RK" secondAttribute="height" multiplier="1040:580" id="6Qf-Yi-n3W"/>
@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="40" id="RK1-t8-gSJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U70-TI-A7c" userLabel="Genre View">
@@ -169,6 +169,7 @@
                     <constraint firstAttribute="bottom" secondItem="mgf-nQ-6hd" secondAttribute="bottom" id="pf2-5E-W6a"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="accessLabel" destination="rUE-fz-TTk" id="NTN-fi-7Dm"/>
                 <outlet property="budgetLabel" destination="FI0-0n-iv8" id="Xzr-ho-b8e"/>
@@ -183,7 +184,6 @@
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="mappin" catalog="system" width="106" height="128"/>
-        <image name="test" width="168" height="168"/>
         <image name="yensign" catalog="system" width="113" height="128"/>
     </resources>
 </document>
