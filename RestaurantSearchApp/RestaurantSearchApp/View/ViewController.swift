@@ -2,8 +2,36 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var searchText: UISearchBar! {
+        didSet {
+            searchText.searchTextField.textColor = .black
+        }
+    }
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: "RestaurantCustomCell", bundle: nil), forCellReuseIdentifier: "RestaurantCustomCell")
+            tableView.refreshControl = UIRefreshControl()
+            tableView.refreshControl?.addTarget(self, action: #selector(self.handleRefreshControl), for: .valueChanged)
+        }
+    }
+    @IBOutlet weak var rangeView: UIView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBAction func selectRangeButton(_ sender: UIButton) {
+        rangeView.isHidden = false
+    }
+    @IBAction func cancelButton(_ sender: UIButton) {
+        rangeView.isHidden = true
+    }
+    @IBAction func doneButton(_ sender: UIButton) {
+        rangeView.isHidden = true
+        self.range = pickerNumber
+        print("range: \(range)")
+    }
+    
     let locationManager = LocationManager.shared
-    var searchWord: String = ""
+    let rangeList = ["300m", "500m", "1000m", "2000m", "3000m"]
+    var searchWord = ""
+    var pickerNumber = 3
     var range = 3
     var error: [Errors]? {
         didSet {
@@ -25,15 +53,6 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var searchText: UISearchBar!
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.register(UINib(nibName: "RestaurantCustomCell", bundle: nil), forCellReuseIdentifier: "RestaurantCustomCell")
-            tableView.refreshControl = UIRefreshControl()
-            tableView.refreshControl?.addTarget(self, action: #selector(self.handleRefreshControl), for: .valueChanged)
-        }
-    }
-
     enum Constants {
         static let baseURL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key="
     }
@@ -44,10 +63,10 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         searchText.delegate = self
+        pickerView.dataSource = self
+        pickerView.delegate = self
         checkAuthorizationStatus()
         fetchGourmet()
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 
     private func fetchGourmet() {
@@ -130,10 +149,39 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
-        guard let searchWord = searchBar.text, !searchWord.isEmpty else {
-            return present(.emptySearchTextAlert(title: "検索欄が空白です！", message: "キーワードを入力してください。"))
-        }
+        guard let searchWord = searchBar.text else { return }
         self.searchWord = searchWord
         fetchGourmet()
+    }
+}
+
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return rangeList.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return rangeList[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch rangeList[row] {
+        case "300m":
+            pickerNumber = 1
+        case "500m":
+            pickerNumber = 2
+        case "1000m":
+            pickerNumber = 3
+        case "2000m":
+            pickerNumber = 4
+        case "3000m":
+            pickerNumber = 5
+        default:
+            pickerNumber = 3
+        }
     }
 }
