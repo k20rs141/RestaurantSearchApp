@@ -670,8 +670,8 @@
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
-        <image name="mappin" width="384" height="512"/>
         <image name="mappin" catalog="system" width="106" height="128"/>
+        <image name="mappin" width="384" height="512"/>
         <image name="parkingsign" catalog="system" width="104" height="128"/>
         <image name="smoking" width="640" height="512"/>
         <image name="tram.fill" catalog="system" width="101" height="128"/>

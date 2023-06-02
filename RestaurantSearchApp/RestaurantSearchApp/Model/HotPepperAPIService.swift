@@ -13,7 +13,6 @@ final class HotPepperAPIService {
             guard let httpStatus = response as? HTTPURLResponse else {
                 throw APIError.invalidResponse
             }
-
             switch httpStatus.statusCode {
                 case 200:
                     let gourmet = try JSONDecoder().decode(Gourmet.self, from: data)
