@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ShopListViewController: UIViewController {
     @IBOutlet weak var searchText: UISearchBar! {
         didSet {
             searchText.searchTextField.textColor = .black
@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     @IBAction func doneButton(_ sender: UIButton) {
         rangeView.isHidden = true
         self.range = pickerNumber
-        print("range: \(range)")
     }
     
     let locationManager = LocationManager.shared
@@ -69,6 +68,7 @@ class ViewController: UIViewController {
         fetchGourmet()
     }
 
+    // ホットペッパーAPIの取得
     private func fetchGourmet() {
         var gourmetSearchURL = ""
         // 予約文字をエンコード
@@ -95,11 +95,12 @@ class ViewController: UIViewController {
                     self.error = error
                 }
             } catch {
-                print("unknown: \(error.localizedDescription)")
+                APIError.unknown
             }
         }
     }
-    
+
+    // ユーザーが位置情報を許可していない場合のアラート
     private func checkAuthorizationStatus() {
         if locationManager.denied {
             print("test: \(locationManager.denied)")
@@ -107,13 +108,14 @@ class ViewController: UIViewController {
         }
     }
 
+    // リフレッシュ機能
     @objc func handleRefreshControl() {
         fetchGourmet()
         tableView.refreshControl?.endRefreshing()
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ShopListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
@@ -135,7 +137,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension ShopListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -146,7 +148,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension ShopListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
         guard let searchWord = searchBar.text else { return }
@@ -155,7 +157,7 @@ extension ViewController: UISearchBarDelegate {
     }
 }
 
-extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension ShopListViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

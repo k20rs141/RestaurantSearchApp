@@ -9,16 +9,7 @@ extension UIAlertController {
         alert.addAction(action)
         return alert
     }
-    
-    static func emptySearchTextAlert(title: String, message: String) -> UIAlertController {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { action in
-            alert.dismiss(animated: true, completion: nil)
-        }
-        alert.addAction(action)
-        return alert
-    }
-    
+
     static func showLocationAlert(title: String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "'設定'でオンにする", style: .default, handler: { action in

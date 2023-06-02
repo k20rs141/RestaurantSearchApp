@@ -17,7 +17,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         userLocation = location
-        print("userLocation: \(userLocation)")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
