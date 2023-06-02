@@ -24,6 +24,8 @@
 		9F17B47D2A1E6C38005B2262 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47C2A1E6C38005B2262 /* NukeExtensions */; };
 		9F17B47F2A1E6C38005B2262 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47E2A1E6C38005B2262 /* NukeUI */; };
 		9FF0FE992A1FAE8C00280699 /* UIAlertControllerswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FE982A1FAE8C00280699 /* UIAlertControllerswift.swift */; };
+		9FFE4A2A2A24F82600C0AF21 /* ShopDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFE4A292A24F82600C0AF21 /* ShopDetail.storyboard */; };
+		9FFE4A2C2A24F86600C0AF21 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE4A2B2A24F86600C0AF21 /* ShopDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		9F17B4742A1CAE12005B2262 /* RestaurantCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCustomCell.swift; sourceTree = "<group>"; };
 		9F17B4772A1CAE4B005B2262 /* RestaurantCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCustomCell.xib; sourceTree = "<group>"; };
 		9FF0FE982A1FAE8C00280699 /* UIAlertControllerswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerswift.swift; sourceTree = "<group>"; };
+		9FFE4A292A24F82600C0AF21 /* ShopDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShopDetail.storyboard; sourceTree = "<group>"; };
+		9FFE4A2B2A24F86600C0AF21 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				9F17B44A2A17AFA3005B2262 /* ViewController.swift */,
+				9FFE4A2B2A24F86600C0AF21 /* ShopDetailViewController.swift */,
 				9F17B4742A1CAE12005B2262 /* RestaurantCustomCell.swift */,
 				9F17B4772A1CAE4B005B2262 /* RestaurantCustomCell.xib */,
 			);
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9F17B44C2A17AFA3005B2262 /* Main.storyboard */,
+				9FFE4A292A24F82600C0AF21 /* ShopDetail.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F17B4532A17AFA4005B2262 /* LaunchScreen.storyboard in Resources */,
+				9FFE4A2A2A24F82600C0AF21 /* ShopDetail.storyboard in Resources */,
 				9F17B4782A1CAE4B005B2262 /* RestaurantCustomCell.xib in Resources */,
 				9F17B4502A17AFA4005B2262 /* Assets.xcassets in Resources */,
 				9F17B44E2A17AFA3005B2262 /* Main.storyboard in Resources */,
@@ -205,6 +212,7 @@
 				9F17B44B2A17AFA3005B2262 /* ViewController.swift in Sources */,
 				9F17B4472A17AFA3005B2262 /* AppDelegate.swift in Sources */,
 				9F17B4672A191413005B2262 /* APIKey.swift in Sources */,
+				9FFE4A2C2A24F86600C0AF21 /* ShopDetailViewController.swift in Sources */,
 				9F17B4692A1B3081005B2262 /* HotPepperAPIService.swift in Sources */,
 				9F17B46F2A1C729D005B2262 /* LocationManager.swift in Sources */,
 				9F17B4752A1CAE12005B2262 /* RestaurantCustomCell.swift in Sources */,
