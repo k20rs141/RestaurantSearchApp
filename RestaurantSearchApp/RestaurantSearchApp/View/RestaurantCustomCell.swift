@@ -7,7 +7,7 @@ class RestaurantCustomCell: UITableViewCell {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var accessLabel: UILabel!
-    
+
     var shop: Shop? {
         didSet {
             Task { @MainActor in
@@ -22,7 +22,7 @@ class RestaurantCustomCell: UITableViewCell {
             }
         }
     }
-    
+
     override func awakeFromNib() {
         super .awakeFromNib()
     }

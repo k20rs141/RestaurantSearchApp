@@ -55,10 +55,10 @@ class ShopListViewController: UIViewController {
     enum Constants {
         static let baseURL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key="
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.dataSource = self
         tableView.delegate = self
         searchText.delegate = self
@@ -89,13 +89,14 @@ class ShopListViewController: UIViewController {
                     } else {
                         DispatchQueue.main.async {
                             self.shops = shops
+                            print(shops)
                         }
                     }
                 } else if let error = response.results.error {
                     self.error = error
                 }
             } catch {
-                APIError.unknown
+                APIError.invalidURL
             }
         }
     }
@@ -103,7 +104,6 @@ class ShopListViewController: UIViewController {
     // ユーザーが位置情報を許可していない場合のアラート
     private func checkAuthorizationStatus() {
         if locationManager.denied {
-            print("test: \(locationManager.denied)")
             present(.showLocationAlert(title: "位置情報をオンにして下さい", message: "位置情報を利用して店舗検索を行います。設定から位置情報の許可をお願いします。"))
         }
     }
@@ -119,11 +119,11 @@ extension ShopListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
+
     public func numberOfSections(in tableView: UITableView) -> Int {
         return shops.count
     }
@@ -171,6 +171,7 @@ extension ShopListViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         switch rangeList[row] {
         case "300m":
             pickerNumber = 1

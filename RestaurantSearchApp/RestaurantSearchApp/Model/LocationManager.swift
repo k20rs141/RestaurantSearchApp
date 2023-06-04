@@ -5,7 +5,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var userLocation: CLLocation?
     var denied = false
-    
+
     override init() {
         super.init()
 
@@ -13,16 +13,16 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startUpdatingLocation()
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         userLocation = location
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("位置情報の取得に失敗しました: \(error.localizedDescription)")
     }
-    
+
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
         // ユーザーが位置情報を選択してない場合
@@ -34,7 +34,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         // ユーザーが設定から位置情報を許可してない場合
         case .denied:
             manager.requestWhenInUseAuthorization()
-            self.denied = true
+            denied = true
         // ユーザーが位置情報を許可している場合
         case .authorizedAlways, .authorizedWhenInUse:
             manager.requestLocation()

@@ -61,7 +61,7 @@ class ShopDetailViewController: UIViewController {
 
         customNavigationBar()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
