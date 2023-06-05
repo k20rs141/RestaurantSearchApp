@@ -25,7 +25,7 @@ struct Shop: Codable {
     let nonSmoking: String
     let parking: String
     let urls: Url
-    
+
     enum CodingKeys: String, CodingKey {
         case name
         case genre
@@ -59,7 +59,7 @@ struct Photos: Codable {
 struct PhotoSize: Codable {
     let large: String?
     let small: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case large = "l"
         case small = "s"
