@@ -37,3 +37,4 @@ xcuserdata/
 
 # ホットペッパーAPIキーのファイル
 RestaurantSearchApp/RestaurantSearchApp/APIKey.swift
+RestaurantSearchApp-SwiftUI/RestaurantSearchApp-SwiftUI/APIKey.swift
