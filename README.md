@@ -3,7 +3,8 @@
 ## 開発環境
 - Xcode 14.3
 - iOS 16.5
-- Swift 5.8
+- Swift 5.9
+- SwiftUI 5.0
 
 ## 開発期間
 7日間
