@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ShopListView: View {
     @State private var searchText = ""
-    var hotPepperViewModel = HotPepperViewModel()
+    var hotPepperModel = HotPepperModel()
 
     var body: some View {
         GeometryReader { geometry in
@@ -25,19 +25,20 @@ struct ShopListView: View {
                             .background(.yellow)
 //                            Text("おすすめ")
                             LazyVStack {
-                                ForEach(0..<hotPepperViewModel.shops.count, id: \.self) { index in
+                                ForEach(0 ..< hotPepperModel.shops.count, id: \.self) { index in
                                     NavigationLink {
-                                        ShopDetailView(model: hotPepperViewModel, section: index)
+                                        ShopDetailView(model: hotPepperModel, section: index)
                                     } label: {
                                         VStack(spacing: 0) {
                                             VStack {
-                                                if let imageUrl = URL(string: hotPepperViewModel.shops[index].photo?.pc.large ?? "na") {
+                                                if let imageUrl = URL(string: hotPepperModel.shops[index].photo?.pc.large ?? "na") {
                                                     AsyncImage(url: imageUrl) { image in
                                                         image
                                                             .resizable()
                                                             .aspectRatio(contentMode: .fill)
                                                             .frame(width: geometry.size.width * 0.9, height: 200)
                                                             .clipped()
+//                                                            .clipShape(.rect(cornerRadius: 12))
                                                     } placeholder: {
                                                         ProgressView()
                                                     }
@@ -45,21 +46,21 @@ struct ShopListView: View {
                                             }
                                             .frame(width: geometry.size.width * 0.9, height: 200)
                                             VStack(alignment: .leading, spacing: 5) {
-                                                Text(hotPepperViewModel.shops[index].name)
+                                                Text(hotPepperModel.shops[index].name)
                                                     .foregroundStyle(.black)
                                                     .font(.system(size: 18))
                                                     .fontWeight(.medium)
                                                 HStack {
                                                     Image(systemName: "fork.knife")
-                                                    Text(hotPepperViewModel.shops[index].genre.name)
+                                                    Text(hotPepperModel.shops[index].genre.name)
                                                     Image(systemName: "yensign")
-                                                    Text(hotPepperViewModel.shops[index].budget.name)
+                                                    Text(hotPepperModel.shops[index].budget.name)
                                                 }
                                                 .font(.system(size: 13))
                                                 .foregroundStyle(.gray)
                                                 HStack {
                                                     Image(systemName: "mappin")
-                                                    Text(hotPepperViewModel.shops[index].mobileAccess)
+                                                    Text(hotPepperModel.shops[index].mobileAccess)
                                                 }
                                                 .font(.system(size: 13))
                                                 .foregroundStyle(.gray)
@@ -83,7 +84,7 @@ struct ShopListView: View {
                 .background(.white)
             }
             .onAppear {
-                hotPepperViewModel.fetchGourmet()
+                hotPepperModel.fetchGourmet()
             }
         }
     }
@@ -95,8 +96,8 @@ struct ShopListView: View {
                 .foregroundStyle(.gray)
            TextField("Search ...", text: $searchText)
                 .onSubmit {
-                    hotPepperViewModel.searchWord = searchText
-                    hotPepperViewModel.fetchGourmet()
+                    hotPepperModel.searchWord = searchText
+                    hotPepperModel.fetchGourmet()
                 }
             if !searchText.isEmpty {
                Button(action: {
@@ -110,11 +111,11 @@ struct ShopListView: View {
         .padding(.horizontal, 15)
        .frame(width: proxy.size.width * 0.9, height: 35)
        .background(Color(.systemGray6))
-       .clipShape(.rect(cornerRadius: 8))
+       .clipShape(.rect(cornerRadius: 12))
        .padding(.bottom)
     }
 }
 
 #Preview {
-    ShopListView(hotPepperViewModel: HotPepperViewModel())
+    ShopListView(hotPepperModel: HotPepperModel())
 }
