@@ -1,11 +1,12 @@
 import Observation
 
-@Observable final class HotPepperViewModel {
+@Observable final class HotPepperModel {
     let locationManager = LocationManager.shared
     var shops = [Shop]()
     var searchWord = ""
     var range = 3
     var gourmetSearchURL = ""
+    var section = 0
 
     enum Constants {
         static let baseURL = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key="
@@ -20,6 +21,7 @@ import Observation
         } else {
             gourmetSearchURL = Constants.baseURL + apiKey + "&lat=35.68944&lng=139.69167&keyword=\(encodeSearchWord)&range=\(range)&count=50&format=json"
         }
+        print(gourmetSearchURL)
 
         Task {
             do {
