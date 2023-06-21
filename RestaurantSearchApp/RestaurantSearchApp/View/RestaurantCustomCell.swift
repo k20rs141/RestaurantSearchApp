@@ -1,7 +1,7 @@
 import Nuke
 import UIKit
 
-class RestaurantCustomCell: UITableViewCell {
+final class RestaurantCustomCell: UITableViewCell {
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
