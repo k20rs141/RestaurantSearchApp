@@ -1,6 +1,6 @@
 import MapKit
 
-class LocationManager: NSObject, CLLocationManagerDelegate {
+final class LocationManager: NSObject, CLLocationManagerDelegate {
     static let shared = LocationManager()
     let locationManager = CLLocationManager()
     var userLocation: CLLocation?

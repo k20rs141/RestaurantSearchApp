@@ -1,7 +1,7 @@
 import UIKit
 import Nuke
 
-class ShopDetailViewController: UIViewController {
+final class ShopDetailViewController: UIViewController {
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
