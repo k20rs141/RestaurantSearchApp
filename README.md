@@ -9,6 +9,12 @@
 ## 開発期間
 7日間
 
+## HotPepperAPI
+1. [HotPepperAPIキーの取得](https://webservice.recruit.co.jp/register/)
+2. 以下のコードを追加し、xxxxxxxxxxxxを自身のAPIキーに変更する
+```APIKey.swift
+let apiKey = "xxxxxxxxxxxx"
+```
 ## アプリケーション機能
 
 ### 機能一覧
