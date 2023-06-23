@@ -2,51 +2,52 @@ import UIKit
 import MapKit
 
 class ShopListViewController: UIViewController {
-    @IBOutlet weak var searchText: UISearchBar! {
+    @IBOutlet weak private var searchText: UISearchBar! {
         didSet {
             searchText.searchTextField.textColor = .black
         }
     }
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet weak private var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "RestaurantCustomCell", bundle: nil), forCellReuseIdentifier: "RestaurantCustomCell")
             tableView.refreshControl = UIRefreshControl()
             tableView.refreshControl?.addTarget(self, action: #selector(self.handleRefreshControl), for: .valueChanged)
         }
     }
-    @IBOutlet weak var rangeView: UIView!
-    @IBOutlet weak var pickerView: UIPickerView!
-    @IBAction func selectRangeButton(_ sender: UIButton) {
+    @IBOutlet weak private var rangeView: UIView!
+    @IBOutlet weak private var pickerView: UIPickerView!
+
+    @IBAction private func selectRangeButton(_ sender: UIButton) {
         rangeView.isHidden = false
     }
-    @IBAction func cancelButton(_ sender: UIButton) {
+    @IBAction private func cancelButton(_ sender: UIButton) {
         rangeView.isHidden = true
     }
-    @IBAction func doneButton(_ sender: UIButton) {
+    @IBAction private func doneButton(_ sender: UIButton) {
         rangeView.isHidden = true
         self.range = pickerNumber
     }
-    
+
     let locationManager = LocationManager.shared
-    let rangeList = ["300m", "500m", "1000m", "2000m", "3000m"]
-    var searchWord = ""
-    var pickerNumber = 3
-    var range = 3
-    var error: [Errors]? {
+    private let rangeList = ["300m", "500m", "1000m", "2000m", "3000m"]
+    private var searchWord = ""
+    private var pickerNumber = 3
+    private var range = 3
+    private var error: [Errors]? {
         didSet {
             if let error = error?.first {
                 switch error.code {
                 case 1000:
-                    present(.showAPIErrorAlert(title: "サーバ障害エラー", message: error.message))
+                    present(.makeAPIErrorAlert(title: "サーバ障害エラー", message: error.message))
                 case 2000:
-                    present(.showAPIErrorAlert(title: "APIキーまたはIPアドレスの認証エラー", message: error.message))
+                    present(.makeAPIErrorAlert(title: "APIキーまたはIPアドレスの認証エラー", message: error.message))
                 default:
-                    present(.showAPIErrorAlert(title: "パラメータ不正エラー", message: error.message))
+                    present(.makeAPIErrorAlert(title: "パラメータ不正エラー", message: error.message))
                 }
             }
         }
     }
-    var shops = [Shop]() {
+    private var shops = [Shop]() {
         didSet {
             tableView.reloadData()
         }
@@ -85,10 +86,10 @@ class ShopListViewController: UIViewController {
                 let response = try await HotPepperAPIService.shared.request(with: gourmetSearchURL)
                 if let shops = response.results.shop {
                     if shops.count == 0 {
-                        present(.showAPIErrorAlert(title: "検索結果が0件です", message: ""))
+                        present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
                     } else {
-                        DispatchQueue.main.async {
-                            self.shops = shops
+                        DispatchQueue.main.async { [weak self] in
+                            self?.shops = shops
                             print(shops)
                         }
                     }
@@ -104,12 +105,12 @@ class ShopListViewController: UIViewController {
     // ユーザーが位置情報を許可していない場合のアラート
     private func checkAuthorizationStatus() {
         if locationManager.denied {
-            present(.showLocationAlert(title: "位置情報をオンにして下さい", message: "位置情報を利用して店舗検索を行います。設定から位置情報の許可をお願いします。"))
+            present(.makeLocationAlert(title: "位置情報をオンにして下さい", message: "位置情報を利用して店舗検索を行います。設定から位置情報の許可をお願いします。"))
         }
     }
 
     // リフレッシュ機能
-    @objc func handleRefreshControl() {
+    @objc private func handleRefreshControl() {
         fetchGourmet()
         tableView.refreshControl?.endRefreshing()
     }
