@@ -2,21 +2,21 @@ import UIKit
 import Nuke
 
 final class ShopDetailViewController: UIViewController {
-    @IBOutlet weak var shopImageView: UIImageView!
-    @IBOutlet weak var shopNameLabel: UILabel!
-    @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var budgetLabel: UILabel!
-    @IBOutlet weak var accessLabel: UILabel!
-    @IBOutlet weak var addressDetailLabel: UILabel!
-    @IBOutlet weak var accessDetailLabel: UILabel!
-    @IBOutlet weak var budgetDetailLabel: UILabel!
-    @IBOutlet weak var openDetailLabel: UILabel!
-    @IBOutlet weak var closeDetailLabel: UILabel!
-    @IBOutlet weak var cardDetailLabel: UILabel!
-    @IBOutlet weak var privateRoomDetailLabel: UILabel!
-    @IBOutlet weak var nonSmokingLabel: UILabel!
-    @IBOutlet weak var parkingDetailLabel: UILabel!
-    @IBOutlet weak var bottomView: UIView! {
+    @IBOutlet weak private var shopImageView: UIImageView!
+    @IBOutlet weak private var shopNameLabel: UILabel!
+    @IBOutlet weak private var genreLabel: UILabel!
+    @IBOutlet weak private var budgetLabel: UILabel!
+    @IBOutlet weak private var accessLabel: UILabel!
+    @IBOutlet weak private var addressDetailLabel: UILabel!
+    @IBOutlet weak private var accessDetailLabel: UILabel!
+    @IBOutlet weak private var budgetDetailLabel: UILabel!
+    @IBOutlet weak private var openDetailLabel: UILabel!
+    @IBOutlet weak private var closeDetailLabel: UILabel!
+    @IBOutlet weak private var cardDetailLabel: UILabel!
+    @IBOutlet weak private var privateRoomDetailLabel: UILabel!
+    @IBOutlet weak private var nonSmokingLabel: UILabel!
+    @IBOutlet weak private var parkingDetailLabel: UILabel!
+    @IBOutlet weak private var bottomView: UIView! {
         didSet {
             bottomView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
             bottomView.layer.shadowColor = UIColor.black.cgColor
@@ -25,7 +25,7 @@ final class ShopDetailViewController: UIViewController {
         }
     }
 
-    @IBAction func reserveButton(_ sender: UIButton) {
+    @IBAction private func reserveButton(_ sender: UIButton) {
         guard let url = URL(string: shopDetail?.urls.pc ?? "URLがありません") else { return }
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
@@ -66,7 +66,7 @@ final class ShopDetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    func customNavigationBar() {
+    private func customNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.backItem?.backButtonDisplayMode = .minimal
         navigationController?.navigationBar.barTintColor = .white

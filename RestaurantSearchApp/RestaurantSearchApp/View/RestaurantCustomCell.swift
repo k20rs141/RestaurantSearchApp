@@ -2,11 +2,11 @@ import Nuke
 import UIKit
 
 final class RestaurantCustomCell: UITableViewCell {
-    @IBOutlet weak var shopImageView: UIImageView!
-    @IBOutlet weak var shopNameLabel: UILabel!
-    @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var budgetLabel: UILabel!
-    @IBOutlet weak var accessLabel: UILabel!
+    @IBOutlet weak private var shopImageView: UIImageView!
+    @IBOutlet weak private var shopNameLabel: UILabel!
+    @IBOutlet weak private var genreLabel: UILabel!
+    @IBOutlet weak private var budgetLabel: UILabel!
+    @IBOutlet weak private var accessLabel: UILabel!
 
     var shop: Shop? {
         didSet {

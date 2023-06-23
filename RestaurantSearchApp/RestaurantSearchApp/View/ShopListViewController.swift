@@ -2,37 +2,38 @@ import UIKit
 import MapKit
 
 class ShopListViewController: UIViewController {
-    @IBOutlet weak var searchText: UISearchBar! {
+    @IBOutlet weak private var searchText: UISearchBar! {
         didSet {
             searchText.searchTextField.textColor = .black
         }
     }
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet weak private var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "RestaurantCustomCell", bundle: nil), forCellReuseIdentifier: "RestaurantCustomCell")
             tableView.refreshControl = UIRefreshControl()
             tableView.refreshControl?.addTarget(self, action: #selector(self.handleRefreshControl), for: .valueChanged)
         }
     }
-    @IBOutlet weak var rangeView: UIView!
-    @IBOutlet weak var pickerView: UIPickerView!
-    @IBAction func selectRangeButton(_ sender: UIButton) {
+    @IBOutlet weak private var rangeView: UIView!
+    @IBOutlet weak private var pickerView: UIPickerView!
+
+    @IBAction private func selectRangeButton(_ sender: UIButton) {
         rangeView.isHidden = false
     }
-    @IBAction func cancelButton(_ sender: UIButton) {
+    @IBAction private func cancelButton(_ sender: UIButton) {
         rangeView.isHidden = true
     }
-    @IBAction func doneButton(_ sender: UIButton) {
+    @IBAction private func doneButton(_ sender: UIButton) {
         rangeView.isHidden = true
         self.range = pickerNumber
     }
-    
+
     let locationManager = LocationManager.shared
-    let rangeList = ["300m", "500m", "1000m", "2000m", "3000m"]
-    var searchWord = ""
-    var pickerNumber = 3
-    var range = 3
-    var error: [Errors]? {
+    private let rangeList = ["300m", "500m", "1000m", "2000m", "3000m"]
+    private var searchWord = ""
+    private var pickerNumber = 3
+    private var range = 3
+    private var error: [Errors]? {
         didSet {
             if let error = error?.first {
                 switch error.code {
@@ -46,7 +47,7 @@ class ShopListViewController: UIViewController {
             }
         }
     }
-    var shops = [Shop]() {
+    private var shops = [Shop]() {
         didSet {
             tableView.reloadData()
         }
@@ -87,8 +88,8 @@ class ShopListViewController: UIViewController {
                     if shops.count == 0 {
                         present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
                     } else {
-                        DispatchQueue.main.async {
-                            self.shops = shops
+                        DispatchQueue.main.async { [weak self] in
+                            self?.shops = shops
                             print(shops)
                         }
                     }
@@ -109,7 +110,7 @@ class ShopListViewController: UIViewController {
     }
 
     // リフレッシュ機能
-    @objc func handleRefreshControl() {
+    @objc private func handleRefreshControl() {
         fetchGourmet()
         tableView.refreshControl?.endRefreshing()
     }
