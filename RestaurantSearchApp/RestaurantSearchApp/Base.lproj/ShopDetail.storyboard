@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="nCp-sO-3N2">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="877.66666666666652"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vg-59-b3c">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
@@ -56,7 +56,7 @@
                                                                                     <constraint firstAttribute="width" constant="20" id="WIc-16-hWx"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="居酒屋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VV-Y5-fYa" userLabel="Genre Label">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VV-Y5-fYa" userLabel="Genre Label">
                                                                                 <rect key="frame" x="25" y="0.0" width="40" height="20"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,8 +85,8 @@
                                                                                 </constraints>
                                                                                 <imageReference key="image" image="yensign" catalog="system" symbolScale="medium"/>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3001～4000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-A5-OF6" userLabel="Budget Label">
-                                                                                <rect key="frame" x="40" y="0.0" width="102" height="20"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-A5-OF6" userLabel="Budget Label">
+                                                                                <rect key="frame" x="40" y="0.0" width="0.0" height="20"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -95,6 +95,7 @@
                                                                         <constraints>
                                                                             <constraint firstItem="tyt-A5-OF6" firstAttribute="leading" secondItem="a37-HN-GWi" secondAttribute="trailing" constant="5" id="BjD-cm-sQ9"/>
                                                                             <constraint firstItem="a37-HN-GWi" firstAttribute="top" secondItem="JGg-qZ-1z4" secondAttribute="top" id="DDr-D4-ErZ"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tyt-A5-OF6" secondAttribute="trailing" constant="20" symbolic="YES" id="J66-o0-vd2"/>
                                                                             <constraint firstItem="a37-HN-GWi" firstAttribute="leading" secondItem="JGg-qZ-1z4" secondAttribute="leading" constant="15" id="WwL-Xv-0yr"/>
                                                                             <constraint firstAttribute="bottom" secondItem="a37-HN-GWi" secondAttribute="bottom" id="cdX-uB-bFO"/>
                                                                             <constraint firstItem="tyt-A5-OF6" firstAttribute="top" secondItem="JGg-qZ-1z4" secondAttribute="top" id="eVd-IF-FZR"/>
@@ -123,7 +124,7 @@
                                                                             <constraint firstAttribute="width" constant="20" id="r0G-vs-nsP"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都台東区上野２-8-4 日栄ビルB1F(仲町通り入口から徒歩1分/ビル1階には&lt;焼肉たむら&gt;/完全個室/上野駅近く居酒屋" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXW-dk-Xd6" userLabel="Access Label">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXW-dk-Xd6" userLabel="Access Label">
                                                                         <rect key="frame" x="25" y="0.0" width="338" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,8 +194,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-Jq-qtV" userLabel="Address Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="51.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-Jq-qtV" userLabel="Address Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="51.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -209,7 +210,7 @@
                                                                             <constraint firstItem="S6k-Qc-U1n" firstAttribute="top" secondItem="Nq2-fC-nxy" secondAttribute="top" id="e25-9S-EAe"/>
                                                                             <constraint firstAttribute="trailing" secondItem="S6k-Qc-U1n" secondAttribute="trailing" id="gSf-Yc-a0H"/>
                                                                             <constraint firstItem="S6k-Qc-U1n" firstAttribute="leading" secondItem="VLe-MP-D3L" secondAttribute="trailing" constant="5" id="lWv-ea-VoC"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="F6n-Jq-qtV" secondAttribute="trailing" id="nOB-7v-efr"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F6n-Jq-qtV" secondAttribute="trailing" symbolic="YES" id="nOB-7v-efr"/>
                                                                             <constraint firstItem="VLe-MP-D3L" firstAttribute="top" secondItem="Nq2-fC-nxy" secondAttribute="top" constant="2.5" id="thr-HZ-fod"/>
                                                                             <constraint firstItem="VLe-MP-D3L" firstAttribute="leading" secondItem="Nq2-fC-nxy" secondAttribute="leading" id="xvc-JI-mhd"/>
                                                                         </constraints>
@@ -232,8 +233,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJC-GN-P6T" userLabel="Access Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJC-GN-P6T" userLabel="Access Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -245,7 +246,7 @@
                                                                             <constraint firstItem="VaD-Y0-xmk" firstAttribute="leading" secondItem="Pzc-7z-X2s" secondAttribute="trailing" constant="5" id="DXB-ax-nvc"/>
                                                                             <constraint firstItem="Pzc-7z-X2s" firstAttribute="leading" secondItem="aoP-7s-sEf" secondAttribute="leading" id="Gve-29-PRM"/>
                                                                             <constraint firstItem="Pzc-7z-X2s" firstAttribute="top" secondItem="aoP-7s-sEf" secondAttribute="top" id="Hfq-2i-Jac"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="IJC-GN-P6T" secondAttribute="trailing" id="WKQ-hK-8MY"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IJC-GN-P6T" secondAttribute="trailing" symbolic="YES" id="WKQ-hK-8MY"/>
                                                                             <constraint firstItem="IJC-GN-P6T" firstAttribute="top" secondItem="VaD-Y0-xmk" secondAttribute="bottom" id="gFJ-AV-tHo"/>
                                                                             <constraint firstItem="IJC-GN-P6T" firstAttribute="top" secondItem="Pzc-7z-X2s" secondAttribute="bottom" id="kUv-vh-gr2"/>
                                                                             <constraint firstItem="IJC-GN-P6T" firstAttribute="leading" secondItem="aoP-7s-sEf" secondAttribute="leading" constant="30" id="mtk-Xn-hn8"/>
@@ -271,8 +272,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEz-NW-2OX" userLabel="Budget Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEz-NW-2OX" userLabel="Budget Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -286,7 +287,7 @@
                                                                             <constraint firstItem="kgb-k9-7Be" firstAttribute="leading" secondItem="jnN-Kb-xgk" secondAttribute="leading" id="ZmS-w6-ZMG"/>
                                                                             <constraint firstAttribute="bottom" secondItem="iEz-NW-2OX" secondAttribute="bottom" id="e9m-wz-SSO"/>
                                                                             <constraint firstItem="O7Q-EI-rEa" firstAttribute="leading" secondItem="kgb-k9-7Be" secondAttribute="trailing" constant="5" id="efD-3R-a19"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="iEz-NW-2OX" secondAttribute="trailing" id="igJ-sA-HSJ"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iEz-NW-2OX" secondAttribute="trailing" symbolic="YES" id="igJ-sA-HSJ"/>
                                                                             <constraint firstItem="iEz-NW-2OX" firstAttribute="top" secondItem="kgb-k9-7Be" secondAttribute="bottom" id="lMC-Kn-26J"/>
                                                                             <constraint firstItem="kgb-k9-7Be" firstAttribute="top" secondItem="jnN-Kb-xgk" secondAttribute="top" id="prr-bx-tdI"/>
                                                                             <constraint firstItem="iEz-NW-2OX" firstAttribute="leading" secondItem="jnN-Kb-xgk" secondAttribute="leading" constant="30" id="rp5-XF-nRD"/>
@@ -310,8 +311,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-oA-2MR" userLabel="Open Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-oA-2MR" userLabel="Open Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -326,7 +327,7 @@
                                                                             <constraint firstItem="IY8-oA-2MR" firstAttribute="top" secondItem="r6T-dr-HQE" secondAttribute="bottom" id="Sg4-9P-6GF"/>
                                                                             <constraint firstItem="yC3-Hg-IgR" firstAttribute="top" secondItem="epB-Dg-XV9" secondAttribute="top" id="b5h-nr-N6w"/>
                                                                             <constraint firstItem="yC3-Hg-IgR" firstAttribute="leading" secondItem="r6T-dr-HQE" secondAttribute="trailing" constant="5" id="jeb-wc-XjT"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="IY8-oA-2MR" secondAttribute="trailing" id="oRT-Gd-djq"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IY8-oA-2MR" secondAttribute="trailing" constant="20" symbolic="YES" id="oRT-Gd-djq"/>
                                                                             <constraint firstItem="IY8-oA-2MR" firstAttribute="top" secondItem="yC3-Hg-IgR" secondAttribute="bottom" id="teZ-3Q-uoG"/>
                                                                             <constraint firstItem="IY8-oA-2MR" firstAttribute="leading" secondItem="epB-Dg-XV9" secondAttribute="leading" constant="30" id="wn8-Kg-HXu"/>
                                                                         </constraints>
@@ -348,8 +349,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dc-m0-zB9" userLabel="Close Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dc-m0-zB9" userLabel="Close Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -364,7 +365,7 @@
                                                                             <constraint firstAttribute="trailing" secondItem="J7e-Jm-x8y" secondAttribute="trailing" id="XXc-rp-4Y4"/>
                                                                             <constraint firstAttribute="bottom" secondItem="7dc-m0-zB9" secondAttribute="bottom" id="eb0-7x-EBN"/>
                                                                             <constraint firstItem="J7e-Jm-x8y" firstAttribute="leading" secondItem="KNU-Ep-4Il" secondAttribute="trailing" constant="5" id="edn-jD-Zud"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="7dc-m0-zB9" secondAttribute="trailing" id="inR-fj-SOR"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7dc-m0-zB9" secondAttribute="trailing" symbolic="YES" id="inR-fj-SOR"/>
                                                                             <constraint firstItem="KNU-Ep-4Il" firstAttribute="top" secondItem="6eg-qn-2dr" secondAttribute="top" id="ppT-h6-yqq"/>
                                                                             <constraint firstItem="KNU-Ep-4Il" firstAttribute="leading" secondItem="6eg-qn-2dr" secondAttribute="leading" id="qAq-Di-Ovz"/>
                                                                         </constraints>
@@ -387,8 +388,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNn-QQ-SlF" userLabel="Card Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNn-QQ-SlF" userLabel="Card Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -400,7 +401,7 @@
                                                                             <constraint firstItem="iNn-QQ-SlF" firstAttribute="top" secondItem="mV9-Sa-T3W" secondAttribute="bottom" id="CPX-zt-H93"/>
                                                                             <constraint firstAttribute="bottom" secondItem="iNn-QQ-SlF" secondAttribute="bottom" id="Ia6-Rl-KD0"/>
                                                                             <constraint firstItem="iNn-QQ-SlF" firstAttribute="leading" secondItem="KLx-2a-E9E" secondAttribute="leading" constant="30" id="MzD-fA-hvf"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="iNn-QQ-SlF" secondAttribute="trailing" id="Q72-IW-OeC"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iNn-QQ-SlF" secondAttribute="trailing" constant="20" symbolic="YES" id="Q72-IW-OeC"/>
                                                                             <constraint firstItem="mV9-Sa-T3W" firstAttribute="leading" secondItem="KLx-2a-E9E" secondAttribute="leading" id="Yvc-qT-6cs"/>
                                                                             <constraint firstItem="mV9-Sa-T3W" firstAttribute="top" secondItem="KLx-2a-E9E" secondAttribute="top" id="mWZ-7U-R65"/>
                                                                             <constraint firstItem="Eix-6t-Rvj" firstAttribute="top" secondItem="KLx-2a-E9E" secondAttribute="top" id="mkv-aj-Dgk"/>
@@ -426,8 +427,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTb-2h-iPC" userLabel="Private Room Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTb-2h-iPC" userLabel="Private Room Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -440,7 +441,7 @@
                                                                             <constraint firstItem="TTb-2h-iPC" firstAttribute="leading" secondItem="5Dl-Tv-Fa0" secondAttribute="leading" constant="30" id="Mdu-56-tQe"/>
                                                                             <constraint firstItem="2In-Fk-he7" firstAttribute="leading" secondItem="5Dl-Tv-Fa0" secondAttribute="leading" id="QuE-Aw-q10"/>
                                                                             <constraint firstItem="2In-Fk-he7" firstAttribute="top" secondItem="5Dl-Tv-Fa0" secondAttribute="top" id="Xtk-Mk-w0y"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="TTb-2h-iPC" secondAttribute="trailing" id="cyu-gs-cgd"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TTb-2h-iPC" secondAttribute="trailing" symbolic="YES" id="cyu-gs-cgd"/>
                                                                             <constraint firstAttribute="trailing" secondItem="q1r-Cv-bnj" secondAttribute="trailing" id="f5n-Tb-QQj"/>
                                                                             <constraint firstItem="q1r-Cv-bnj" firstAttribute="leading" secondItem="2In-Fk-he7" secondAttribute="trailing" constant="5" id="fjb-TH-t48"/>
                                                                             <constraint firstAttribute="bottom" secondItem="TTb-2h-iPC" secondAttribute="bottom" id="k8t-i5-vzi"/>
@@ -465,8 +466,8 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIo-WB-Qc9" userLabel="Non Smoking Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIo-WB-Qc9" userLabel="Non Smoking Detail Label">
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="0.0" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -477,7 +478,7 @@
                                                                             <constraint firstItem="Y6f-VR-agc" firstAttribute="leading" secondItem="ByW-V5-Qz9" secondAttribute="trailing" constant="10" id="Bwf-6H-DMO"/>
                                                                             <constraint firstItem="rIo-WB-Qc9" firstAttribute="leading" secondItem="eUD-x5-VPT" secondAttribute="leading" constant="30" id="GJ6-mB-YxL"/>
                                                                             <constraint firstItem="ByW-V5-Qz9" firstAttribute="top" secondItem="eUD-x5-VPT" secondAttribute="top" constant="2.5" id="LVn-nx-3cp"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="rIo-WB-Qc9" secondAttribute="trailing" id="OfH-j7-ULA"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rIo-WB-Qc9" secondAttribute="trailing" symbolic="YES" id="OfH-j7-ULA"/>
                                                                             <constraint firstItem="rIo-WB-Qc9" firstAttribute="top" secondItem="ByW-V5-Qz9" secondAttribute="bottom" constant="2.5" id="YTY-IY-qmH"/>
                                                                             <constraint firstItem="Y6f-VR-agc" firstAttribute="top" secondItem="eUD-x5-VPT" secondAttribute="top" id="gvM-BL-tPd"/>
                                                                             <constraint firstAttribute="bottom" secondItem="rIo-WB-Qc9" secondAttribute="bottom" id="mvc-Pk-kYl"/>
@@ -505,7 +506,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXX-CO-hWe" userLabel="Parking Detail Label">
-                                                                                <rect key="frame" x="30" y="24.999999999999996" width="333" height="46.666666666666657"/>
+                                                                                <rect key="frame" x="30" y="24.999999999999996" width="306" height="46.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -519,7 +520,7 @@
                                                                             <constraint firstItem="6Fu-9A-Nor" firstAttribute="leading" secondItem="aTC-2u-OBw" secondAttribute="trailing" constant="5" id="KPk-wE-lEd"/>
                                                                             <constraint firstItem="XXX-CO-hWe" firstAttribute="top" secondItem="aTC-2u-OBw" secondAttribute="bottom" id="UvF-SN-MPK"/>
                                                                             <constraint firstItem="aTC-2u-OBw" firstAttribute="top" secondItem="ZYh-xh-0aE" secondAttribute="top" id="WHq-uh-bN3"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="XXX-CO-hWe" secondAttribute="trailing" id="WJR-HT-sA5"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XXX-CO-hWe" secondAttribute="trailing" symbolic="YES" id="WJR-HT-sA5"/>
                                                                             <constraint firstAttribute="trailing" secondItem="6Fu-9A-Nor" secondAttribute="trailing" id="cGf-oI-IQJ"/>
                                                                             <constraint firstItem="6Fu-9A-Nor" firstAttribute="top" secondItem="ZYh-xh-0aE" secondAttribute="top" id="hWS-ei-4l5"/>
                                                                             <constraint firstItem="aTC-2u-OBw" firstAttribute="leading" secondItem="ZYh-xh-0aE" secondAttribute="leading" id="hbi-Kn-Bzd"/>
@@ -577,10 +578,10 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="tEU-Yi-PP8"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7Z-j7-qCX" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="766.66666666666663" width="393" height="85.333333333333371"/>
+                                <rect key="frame" x="0.0" y="790" width="393" height="87.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tt-ci-8io" userLabel="Reserve Button">
-                                        <rect key="frame" x="117.66666666666667" y="12.999999999999996" width="255.33333333333331" height="42.666666666666657"/>
+                                        <rect key="frame" x="119.33333333333333" y="13.333333333333368" width="255.33333333333337" height="43.666666666666657"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -597,7 +598,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-mJ-sJe" userLabel="Bookmark Button">
-                                        <rect key="frame" x="35" y="13" width="51" height="51"/>
+                                        <rect key="frame" x="35" y="13.333333333333368" width="52.666666666666657" height="52.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cbX-mJ-sJe" secondAttribute="height" multiplier="1:1" id="FGR-FF-5Si"/>
                                         </constraints>
@@ -617,11 +618,12 @@
                                 <constraints>
                                     <constraint firstItem="3Tt-ci-8io" firstAttribute="width" secondItem="l7Z-j7-qCX" secondAttribute="width" multiplier="0.65" id="BFG-tY-y8F"/>
                                     <constraint firstItem="cbX-mJ-sJe" firstAttribute="height" secondItem="l7Z-j7-qCX" secondAttribute="height" multiplier="0.6" id="MaI-Wr-U9H"/>
+                                    <constraint firstItem="3Tt-ci-8io" firstAttribute="leading" secondItem="cbX-mJ-sJe" secondAttribute="trailing" constant="31.666666666666671" id="S65-Js-OoV"/>
                                     <constraint firstItem="3Tt-ci-8io" firstAttribute="centerY" secondItem="l7Z-j7-qCX" secondAttribute="centerY" multiplier="0.8" id="YLq-u8-vJt"/>
                                     <constraint firstItem="cbX-mJ-sJe" firstAttribute="centerY" secondItem="l7Z-j7-qCX" secondAttribute="centerY" multiplier="0.9" id="aJv-ol-Kn9"/>
                                     <constraint firstItem="cbX-mJ-sJe" firstAttribute="leading" secondItem="l7Z-j7-qCX" secondAttribute="leading" constant="35" id="ayh-KL-LgA"/>
                                     <constraint firstItem="3Tt-ci-8io" firstAttribute="height" secondItem="l7Z-j7-qCX" secondAttribute="height" multiplier="0.5" id="f0I-qC-JTI"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Tt-ci-8io" secondAttribute="trailing" constant="20" id="vio-7E-yng"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Tt-ci-8io" secondAttribute="trailing" symbolic="YES" id="vio-7E-yng"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -671,8 +673,8 @@
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
-        <image name="mappin" catalog="system" width="106" height="128"/>
         <image name="mappin" width="384" height="512"/>
+        <image name="mappin" catalog="system" width="106" height="128"/>
         <image name="parkingsign" catalog="system" width="104" height="128"/>
         <image name="smoking" width="640" height="512"/>
         <image name="tram.fill" catalog="system" width="101" height="128"/>
@@ -681,7 +683,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

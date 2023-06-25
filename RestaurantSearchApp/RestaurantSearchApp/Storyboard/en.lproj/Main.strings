@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; configuration.title = "決定"; ObjectID = "Igw-RT-yJG"; */
+"Igw-RT-yJG.configuration.title" = "Decide";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Igw-RT-yJG"; */
+"Igw-RT-yJG.normalTitle" = "Button";
+
+/* Class = "UISearchBar"; placeholder = "お店を検索"; ObjectID = "TQk-dl-OhI"; */
+"TQk-dl-OhI.placeholder" = "Search";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yG9-Az-Xs6"; */
+"yG9-Az-Xs6.normalTitle" = "Button";
