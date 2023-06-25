@@ -97,7 +97,7 @@ class ShopListViewController: UIViewController {
                     self.error = error
                 }
             } catch {
-                APIError.invalidURL
+                present(.makeAPIErrorAlert(title: APIError.invalidURL.title, message: APIError.invalidURL.description))
             }
         }
     }
