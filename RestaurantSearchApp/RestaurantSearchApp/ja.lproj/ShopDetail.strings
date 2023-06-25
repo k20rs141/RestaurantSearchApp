@@ -1,0 +1,45 @@
+
+/* Class = "UIButton"; configuration.title = "予約する"; ObjectID = "3Tt-ci-8io"; */
+"3Tt-ci-8io.configuration.title" = "予約する";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Tt-ci-8io"; */
+"3Tt-ci-8io.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "駐車場"; ObjectID = "6Fu-9A-Nor"; */
+"6Fu-9A-Nor.text" = "駐車場";
+
+/* Class = "UILabel"; text = "クレジットカード"; ObjectID = "Eix-6t-Rvj"; */
+"Eix-6t-Rvj.text" = "クレジットカード";
+
+/* Class = "UILabel"; text = "定休日"; ObjectID = "J7e-Jm-x8y"; */
+"J7e-Jm-x8y.text" = "定休日";
+
+/* Class = "UILabel"; text = "予算"; ObjectID = "O7Q-EI-rEa"; */
+"O7Q-EI-rEa.text" = "予算";
+
+/* Class = "UILabel"; text = "住所"; ObjectID = "S6k-Qc-U1n"; */
+"S6k-Qc-U1n.text" = "住所";
+
+/* Class = "UILabel"; text = "アクセス"; ObjectID = "VaD-Y0-xmk"; */
+"VaD-Y0-xmk.text" = "アクセス";
+
+/* Class = "UILabel"; text = "禁煙・喫煙"; ObjectID = "Y6f-VR-agc"; */
+"Y6f-VR-agc.text" = "禁煙・喫煙";
+
+/* Class = "UIButton"; configuration.title = "保存"; ObjectID = "cbX-mJ-sJe"; */
+"cbX-mJ-sJe.configuration.title" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cbX-mJ-sJe"; */
+"cbX-mJ-sJe.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "基本情報"; ObjectID = "lVM-CX-3l4"; */
+"lVM-CX-3l4.text" = "基本情報";
+
+/* Class = "UILabel"; text = "個室居酒屋 北海道幾蔵 上野本店"; ObjectID = "opV-29-7fZ"; */
+"opV-29-7fZ.text" = "個室居酒屋 北海道幾蔵 上野本店";
+
+/* Class = "UILabel"; text = "個室"; ObjectID = "q1r-Cv-bnj"; */
+"q1r-Cv-bnj.text" = "個室";
+
+/* Class = "UILabel"; text = "営業時間"; ObjectID = "yC3-Hg-IgR"; */
+"yC3-Hg-IgR.text" = "営業時間";

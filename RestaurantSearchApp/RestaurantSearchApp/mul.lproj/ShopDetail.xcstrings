@@ -1,0 +1,330 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "1VV-Y5-fYa.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"居酒屋\"; ObjectID = \"1VV-Y5-fYa\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "居酒屋"
+          }
+        }
+      }
+    },
+    "3Tt-ci-8io.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"予約する\"; ObjectID = \"3Tt-ci-8io\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "予約する"
+          }
+        }
+      }
+    },
+    "3Tt-ci-8io.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"3Tt-ci-8io\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "6Fu-9A-Nor.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"駐車場\"; ObjectID = \"6Fu-9A-Nor\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "駐車場"
+          }
+        }
+      }
+    },
+    "7dc-m0-zB9.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"7dc-m0-zB9\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "cbX-mJ-sJe.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"保存\"; ObjectID = \"cbX-mJ-sJe\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "保存"
+          }
+        }
+      }
+    },
+    "cbX-mJ-sJe.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"cbX-mJ-sJe\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "Eix-6t-Rvj.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"クレジットカード\"; ObjectID = \"Eix-6t-Rvj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "クレジットカード"
+          }
+        }
+      }
+    },
+    "F6n-Jq-qtV.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"F6n-Jq-qtV\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "iEz-NW-2OX.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"iEz-NW-2OX\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "IJC-GN-P6T.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"IJC-GN-P6T\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "iNn-QQ-SlF.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"iNn-QQ-SlF\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "IY8-oA-2MR.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"IY8-oA-2MR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "J7e-Jm-x8y.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"定休日\"; ObjectID = \"J7e-Jm-x8y\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "定休日"
+          }
+        }
+      }
+    },
+    "lVM-CX-3l4.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"基本情報\"; ObjectID = \"lVM-CX-3l4\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "基本情報"
+          }
+        }
+      }
+    },
+    "O7Q-EI-rEa.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"予算\"; ObjectID = \"O7Q-EI-rEa\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "予算"
+          }
+        }
+      }
+    },
+    "opV-29-7fZ.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"個室居酒屋 北海道幾蔵 上野本店\"; ObjectID = \"opV-29-7fZ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "個室居酒屋 北海道幾蔵 上野本店"
+          }
+        }
+      }
+    },
+    "q1r-Cv-bnj.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"個室\"; ObjectID = \"q1r-Cv-bnj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "個室"
+          }
+        }
+      }
+    },
+    "rIo-WB-Qc9.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"rIo-WB-Qc9\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "S6k-Qc-U1n.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"住所\"; ObjectID = \"S6k-Qc-U1n\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "住所"
+          }
+        }
+      }
+    },
+    "sXW-dk-Xd6.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"東京都台東区上野２-8-4 日栄ビルB1F(仲町通り入口から徒歩1分/ビル1階には<焼肉たむら>/完全個室/上野駅近く居酒屋\"; ObjectID = \"sXW-dk-Xd6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "東京都台東区上野２-8-4 日栄ビルB1F(仲町通り入口から徒歩1分/ビル1階には<焼肉たむら>/完全個室/上野駅近く居酒屋"
+          }
+        }
+      }
+    },
+    "TTb-2h-iPC.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"TTb-2h-iPC\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "tyt-A5-OF6.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"3001～4000円\"; ObjectID = \"tyt-A5-OF6\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "3001～4000円"
+          }
+        }
+      }
+    },
+    "VaD-Y0-xmk.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"アクセス\"; ObjectID = \"VaD-Y0-xmk\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "アクセス"
+          }
+        }
+      }
+    },
+    "XXX-CO-hWe.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL\"; ObjectID = \"XXX-CO-hWe\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "月～木: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）金、祝前日: 17:00～翌1:00 （料理L.O. 23:30 ドリンクL"
+          }
+        }
+      }
+    },
+    "Y6f-VR-agc.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"禁煙・喫煙\"; ObjectID = \"Y6f-VR-agc\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "禁煙・喫煙"
+          }
+        }
+      }
+    },
+    "yC3-Hg-IgR.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"営業時間\"; ObjectID = \"yC3-Hg-IgR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "営業時間"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
