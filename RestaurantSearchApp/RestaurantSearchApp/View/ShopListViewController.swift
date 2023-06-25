@@ -97,7 +97,7 @@ class ShopListViewController: UIViewController {
                     self.error = error
                 }
             } catch {
-                APIError.invalidURL
+                present(.makeAPIErrorAlert(title: APIError.invalidURL.title, message: APIError.invalidURL.description))
             }
         }
     }
@@ -116,6 +116,7 @@ class ShopListViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ShopListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
@@ -138,6 +139,7 @@ extension ShopListViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ShopListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -149,6 +151,7 @@ extension ShopListViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension ShopListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
@@ -158,6 +161,7 @@ extension ShopListViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - UIPickerViewDataSource, UIPickerViewDelegate
 extension ShopListViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -172,20 +176,6 @@ extension ShopListViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        switch rangeList[row] {
-        case "300m":
-            pickerNumber = 1
-        case "500m":
-            pickerNumber = 2
-        case "1000m":
-            pickerNumber = 3
-        case "2000m":
-            pickerNumber = 4
-        case "3000m":
-            pickerNumber = 5
-        default:
-            pickerNumber = 3
-        }
+        pickerNumber = row + 1
     }
 }
