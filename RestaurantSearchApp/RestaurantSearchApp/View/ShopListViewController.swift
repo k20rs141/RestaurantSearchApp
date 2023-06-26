@@ -71,19 +71,30 @@ class ShopListViewController: UIViewController {
 
     // ホットペッパーAPIの取得
     private func fetchGourmet() {
-        var gourmetSearchURL = ""
+        // URLComponentsの作成
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "webservice.recruit.co.jp"
+        urlComponents.path = "/hotpepper/gourmet/v1/"
+        // クエリの追加
+        var queryItems = [URLQueryItem]()
+        queryItems.append(URLQueryItem(name: "key", value: apiKey))
+        queryItems.append(URLQueryItem(name: "lat", value: "\(locationManager.userLocation?.coordinate.latitude ?? 35.68944)"))
+        queryItems.append(URLQueryItem(name: "lng", value: "\(locationManager.userLocation?.coordinate.longitude ?? 139.69167)"))
         // 予約文字をエンコード
         guard let encodeSearchWord = searchWord.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        if let userLocation = locationManager.userLocation?.coordinate {
-            gourmetSearchURL = Constants.baseURL + apiKey + "&lat=\(userLocation.latitude)&lng=\(userLocation.longitude)&keyword=\(encodeSearchWord)&range=\(range)&count=50&format=json"
-        } else {
-            gourmetSearchURL = Constants.baseURL + apiKey + "&lat=35.68944&lng=139.69167&keyword=\(encodeSearchWord)&range=\(range)&count=50&format=json"
-        }
-        print(gourmetSearchURL)
+        queryItems.append(URLQueryItem(name: "keyword", value: "\(encodeSearchWord)"))
+        queryItems.append(URLQueryItem(name: "range", value: "\(range)"))
+        queryItems.append(URLQueryItem(name: "count", value: "50"))
+        queryItems.append(URLQueryItem(name: "format", value: "json"))
+
+        urlComponents.queryItems = queryItems
+        print("URLComponents: \(urlComponents)")
 
         Task {
             do {
-                let response = try await HotPepperAPIService.shared.request(with: gourmetSearchURL)
+                guard let url = urlComponents.url else { return }
+                let response = try await HotPepperAPIService.shared.request(with: url.absoluteString)
                 if let shops = response.results.shop {
                     if shops.count == 0 {
                         present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
