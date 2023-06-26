@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="nCp-sO-3N2">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="877.66666666666652"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vg-59-b3c">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
@@ -578,10 +578,10 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="tEU-Yi-PP8"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7Z-j7-qCX" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="790" width="393" height="87.666666666666629"/>
+                                <rect key="frame" x="0.0" y="766.66666666666663" width="393" height="85.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tt-ci-8io" userLabel="Reserve Button">
-                                        <rect key="frame" x="119.33333333333333" y="13.333333333333368" width="255.33333333333337" height="43.666666666666657"/>
+                                        <rect key="frame" x="117.66666666666667" y="12.999999999999996" width="255.66666666666663" height="42.666666666666657"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -597,8 +597,8 @@
                                             <action selector="reserveButton:" destination="olI-MN-ENJ" eventType="touchUpInside" id="0YY-dc-dyn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-mJ-sJe" userLabel="Bookmark Button">
-                                        <rect key="frame" x="35" y="13.333333333333368" width="52.666666666666657" height="52.666666666666657"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-mJ-sJe" userLabel="Bookmark Button">
+                                        <rect key="frame" x="35" y="13" width="51" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cbX-mJ-sJe" secondAttribute="height" multiplier="1:1" id="FGR-FF-5Si"/>
                                         </constraints>
@@ -623,7 +623,7 @@
                                     <constraint firstItem="cbX-mJ-sJe" firstAttribute="centerY" secondItem="l7Z-j7-qCX" secondAttribute="centerY" multiplier="0.9" id="aJv-ol-Kn9"/>
                                     <constraint firstItem="cbX-mJ-sJe" firstAttribute="leading" secondItem="l7Z-j7-qCX" secondAttribute="leading" constant="35" id="ayh-KL-LgA"/>
                                     <constraint firstItem="3Tt-ci-8io" firstAttribute="height" secondItem="l7Z-j7-qCX" secondAttribute="height" multiplier="0.5" id="f0I-qC-JTI"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Tt-ci-8io" secondAttribute="trailing" symbolic="YES" id="vio-7E-yng"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Tt-ci-8io" secondAttribute="trailing" constant="20" symbolic="YES" id="vio-7E-yng"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -673,8 +673,8 @@
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
-        <image name="mappin" width="384" height="512"/>
         <image name="mappin" catalog="system" width="106" height="128"/>
+        <image name="mappin" width="384" height="512"/>
         <image name="parkingsign" catalog="system" width="104" height="128"/>
         <image name="smoking" width="640" height="512"/>
         <image name="tram.fill" catalog="system" width="101" height="128"/>
@@ -683,7 +683,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
