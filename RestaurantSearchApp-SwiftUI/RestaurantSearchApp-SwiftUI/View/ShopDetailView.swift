@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ShopDetailView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var likeButton = false
     let basicInformation = [
         BasicInformation(id: 0, image: "mappin", title: "住所"),
         BasicInformation(id: 1, image: "tram.fill", title: "アクセス"),
@@ -32,15 +33,16 @@ struct ShopDetailView: View {
             }
             HStack {
                 Button {
-                    
+                    likeButton.toggle()
+                    Haptics.lightImpact()
                 } label: {
-                    Image(systemName: "heart")
-                        .foregroundStyle(.black)
+                    Image(systemName: likeButton ? "heart.fill" : "heart")
+                        .foregroundStyle(likeButton ? .red : .black)
                 }
                 .frame(width: 40, height: 40)
                 .background(.white)
                 .clipShape(.rect(cornerRadius: 8))
-                .padding(.trailing, 20)
+                .padding(.trailing, 25)
                 Button {
                     
                 } label: {
@@ -53,7 +55,7 @@ struct ShopDetailView: View {
             }
             .padding(.top)
             .frame(width: UIScreen.main.bounds.width, height: 55)
-//            .background(.white)
+            .background(.clear)
             .offset(y: -20)
             .shadow(radius: 10)
         }
@@ -95,8 +97,7 @@ struct ShopDetailView: View {
                                             .clipShape(Circle())
                                     }
                                 }
-                                .padding(.bottom, 40)
-                                .padding(.horizontal, 20)
+                                .padding(10)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             }
                             .padding(.top, size.height * 0.13)
@@ -115,7 +116,7 @@ struct ShopDetailView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text(model.shops[section].name)
                 .foregroundStyle(.black)
-                .font(.system(size: 25))
+                .font(.system(size: 28))
                 .fontWeight(.medium)
                 .padding(.vertical)
             HStack {
