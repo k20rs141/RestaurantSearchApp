@@ -2,16 +2,17 @@ import SwiftUI
 
 struct ShopListView: View {
     @State private var searchText = ""
+    @State private var isModalSheet = false
     var hotPepperModel = HotPepperModel()
 
     var body: some View {
         GeometryReader { geometry in
             NavigationStack {
                 VStack {
-                    SearchView(proxy: geometry)
+                    HeaderView(proxy: geometry)
                     VStack(alignment: .leading) {
                         ScrollView {
-                            HStack {
+//                            HStack {
                                 ScrollView(.horizontal) {
                                     LazyHStack {
                                         ForEach(0 ..< 5) { _ in
@@ -19,8 +20,9 @@ struct ShopListView: View {
                                                 .padding()
                                         }
                                     }
+//                                    .background(.red)
                                 }
-                            }
+//                            }
                             .frame(width: geometry.size.width * 0.9, height: 100)
                             .background(.yellow)
 //                            Text("おすすめ")
@@ -78,10 +80,17 @@ struct ShopListView: View {
                                 .padding(.bottom)
                             }
                         }
+                        .refreshable {
+                            hotPepperModel.fetchGourmet()
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(.white)
+                .sheet(isPresented: $isModalSheet) {
+                    PickerView(isModalSheet: $isModalSheet)
+                        .presentationDetents([.fraction(0.28)])
+                }
             }
             .onAppear {
                 hotPepperModel.fetchGourmet()
@@ -90,29 +99,39 @@ struct ShopListView: View {
     }
 
     @ViewBuilder
-    func SearchView(proxy: GeometryProxy) -> some View {
+    func HeaderView(proxy: GeometryProxy) -> some View {
         HStack {
-           Image(systemName: "magnifyingglass")
-                .foregroundStyle(.gray)
-           TextField("Search ...", text: $searchText)
-                .onSubmit {
-                    hotPepperModel.searchWord = searchText
-                    hotPepperModel.fetchGourmet()
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(.gray)
+                TextField("Search ...", text: $searchText)
+                    .onSubmit {
+                        hotPepperModel.searchWord = searchText
+                        hotPepperModel.fetchGourmet()
+                    }
+                if !searchText.isEmpty {
+                    Button(action: {
+                        self.searchText.removeAll()
+                    }){
+                        Image(systemName: "multiply.circle.fill")
+                            .foregroundColor(.gray)
+                    }
                 }
-            if !searchText.isEmpty {
-               Button(action: {
-                   self.searchText.removeAll()
-               }){
-                   Image(systemName: "multiply.circle.fill")
-                       .foregroundColor(.gray)
-               }
-           }
+            }
+            .padding(.horizontal, 15)
+            .frame(width: proxy.size.width * 0.8, height: 35)
+            .background(Color(.systemGray6))
+            .clipShape(.rect(cornerRadius: 12))
+            Button {
+                isModalSheet = true
+            } label: {
+                Image(systemName: "slider.horizontal.3")
+                    .foregroundStyle(.black)
+                    .font(.title)
+                    .frame(width: proxy.size.width * 0.1, height: 35)
+            }
         }
-        .padding(.horizontal, 15)
-       .frame(width: proxy.size.width * 0.9, height: 35)
-       .background(Color(.systemGray6))
-       .clipShape(.rect(cornerRadius: 12))
-       .padding(.bottom)
+        .frame(width: proxy.size.width, height: 35, alignment: .center)
     }
 }
 
