@@ -23,6 +23,7 @@
 		9F17B47B2A1E6C38005B2262 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47A2A1E6C38005B2262 /* Nuke */; };
 		9F17B47D2A1E6C38005B2262 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47C2A1E6C38005B2262 /* NukeExtensions */; };
 		9F17B47F2A1E6C38005B2262 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9F17B47E2A1E6C38005B2262 /* NukeUI */; };
+		9FA0AAF02A4AB1D000ECB1F5 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0AAEF2A4AB1D000ECB1F5 /* APIEndpoint.swift */; };
 		9FE406402A4802430053C7EA /* ShopDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE406422A4802430053C7EA /* ShopDetail.storyboard */; };
 		9FF0FE992A1FAE8C00280699 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FE982A1FAE8C00280699 /* UIAlertController.swift */; };
 		9FFE4A2C2A24F86600C0AF21 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE4A2B2A24F86600C0AF21 /* ShopDetailViewController.swift */; };
@@ -44,6 +45,7 @@
 		9F17B46E2A1C729D005B2262 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9F17B4742A1CAE12005B2262 /* RestaurantCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCustomCell.swift; sourceTree = "<group>"; };
 		9F17B4772A1CAE4B005B2262 /* RestaurantCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCustomCell.xib; sourceTree = "<group>"; };
+		9FA0AAEF2A4AB1D000ECB1F5 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		9FE406412A4802430053C7EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShopDetail.storyboard; sourceTree = "<group>"; };
 		9FE406452A4805A70053C7EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ShopDetail.strings; sourceTree = "<group>"; };
 		9FE406472A4805AC0053C7EA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ShopDetail.strings; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				9F17B46E2A1C729D005B2262 /* LocationManager.swift */,
 				9F17B4682A1B3081005B2262 /* HotPepperAPIService.swift */,
 				9F17B46A2A1B3477005B2262 /* GourmetResponse.swift */,
+				9FA0AAEF2A4AB1D000ECB1F5 /* APIEndpoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				9FFE4A2C2A24F86600C0AF21 /* ShopDetailViewController.swift in Sources */,
 				9F17B4692A1B3081005B2262 /* HotPepperAPIService.swift in Sources */,
 				9F17B46F2A1C729D005B2262 /* LocationManager.swift in Sources */,
+				9FA0AAF02A4AB1D000ECB1F5 /* APIEndpoint.swift in Sources */,
 				9F17B4752A1CAE12005B2262 /* RestaurantCustomCell.swift in Sources */,
 				9F17B46B2A1B3477005B2262 /* GourmetResponse.swift in Sources */,
 				9F17B4492A17AFA3005B2262 /* SceneDelegate.swift in Sources */,
