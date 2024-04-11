@@ -26,7 +26,7 @@ final class APIEndpoint {
     }
 
     // ホットペッパーAPIの取得
-    func fetchGourmet(searchWord: String, range: Int) {
+    func fetchGourmet(searchWord: String, range: Int) async {
         // URLComponentsの作成
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -39,35 +39,36 @@ final class APIEndpoint {
         queryItems.append(URLQueryItem(name: "lng", value: "\(locationManager.userLocation?.coordinate.longitude ?? 139.69167)"))
         // 予約文字をエンコード
         guard let encodeSearchWord = searchWord.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        queryItems.append(URLQueryItem(name: "keyword", value: "\(encodeSearchWord)"))
+        queryItems.append(URLQueryItem(name: "keyword", value: encodeSearchWord))
         queryItems.append(URLQueryItem(name: "range", value: "\(range)"))
         queryItems.append(URLQueryItem(name: "count", value: "50"))
         queryItems.append(URLQueryItem(name: "format", value: "json"))
 
         urlComponents.queryItems = queryItems
         print("URLComponents: \(urlComponents)")
+        guard let url = urlComponents.url else { return }
 
         Task {
-            do {
-                guard let url = urlComponents.url else { return }
-                let response = try await HotPepperAPIService.shared.request(with: url.absoluteString)
-                if let shops = response.results.shop {
-                    if shops.count == 0 {
-//                        view.present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
-//                        present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
-                    } else {
-                        DispatchQueue.main.async { [weak self] in
-                            self?.shops = shops
-                            print(shops)
+                do {
+                    let response = try await HotPepperAPIService.shared.request(with: url.absoluteString)
+                    if let shops = response.results.shop {
+                        if shops.count == 0 {
+                            //                        view.present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
+                            //                        present(.makeAPIErrorAlert(title: "検索結果が0件です", message: ""))
+                        } else {
+                            DispatchQueue.main.async { [weak self] in
+                                self?.shops = shops
+                                print(shops)
+                            }
                         }
+                    } else if let error = response.results.error {
+                        self.error = error
                     }
-                } else if let error = response.results.error {
-                    self.error = error
+
+                } catch {
+
+                    await UIAlertController().present(.makeAPIErrorAlert(title: APIError.invalidURL.title, message: APIError.invalidURL.description))
                 }
-            } catch {
-                UIAlertController().present(.makeAPIErrorAlert(title: APIError.invalidURL.title, message: APIError.invalidURL.description))
-            }
         }
     }
-
 }
