@@ -1,7 +1,7 @@
 import Foundation
 
 final class HotPepperAPIService {
-    static let shared = HotPepperAPIService()
+    @MainActor static let shared = HotPepperAPIService()
 
     func request(with urlString: String) async throws -> Gourmet {
         guard let url = URL(string: urlString) else {

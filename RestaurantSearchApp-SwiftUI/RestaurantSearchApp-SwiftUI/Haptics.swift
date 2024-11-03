@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor 
 public class Haptics {
     static private let shared = Haptics()
     // UISelectionFeedbackGeneratorはUIの値が変化した時に使用
