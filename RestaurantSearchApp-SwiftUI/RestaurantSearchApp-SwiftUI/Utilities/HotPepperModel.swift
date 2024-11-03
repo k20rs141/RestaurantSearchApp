@@ -1,6 +1,7 @@
 import Observation
 
-@Observable final class HotPepperModel {
+@Observable
+final class HotPepperModel {
     let locationManager = LocationManager.shared
     var shops = [Shop]()
     var searchWord = ""
