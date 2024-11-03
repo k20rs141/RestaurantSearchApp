@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -154,7 +154,6 @@
 				};
 			};
 			buildConfigurationList = 9F29A42E2A3DF86700E264EE /* Build configuration list for PBXProject "RestaurantSearchApp-SwiftUI" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -162,6 +161,7 @@
 				Base,
 			);
 			mainGroup = 9F29A42A2A3DF86700E264EE;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 9F29A4342A3DF86700E264EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,7 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.RestaurantSearchApp-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -381,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.RestaurantSearchApp-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
