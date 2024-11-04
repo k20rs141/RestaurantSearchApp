@@ -3,7 +3,8 @@ import SwiftUI
 struct PickerView: View {
     @State private var range = ["300m", "500m", "1000m", "2000m", "3000m"]
     @Binding var isModalSheet: Bool
-    let screen = UIScreen.main.bounds
+    let proxy: CGSize
+
     var body: some View {
         HStack {
             Spacer()
@@ -15,7 +16,7 @@ struct PickerView: View {
         }
         .foregroundColor(.primary)
         .padding(.horizontal)
-        .frame(width: screen.width * 0.95, height: screen.height * 0.05)
+        .frame(width: proxy.width * 0.95, height: proxy.height * 0.05)
         .padding()
         Picker("", selection: $range) {
             ForEach(range, id: \.self) { type in
@@ -28,5 +29,5 @@ struct PickerView: View {
 }
 
 #Preview {
-    PickerView(isModalSheet: .constant(false))
+    PickerView(isModalSheet: .constant(false), proxy: UIScreen.main.bounds.size)
 }

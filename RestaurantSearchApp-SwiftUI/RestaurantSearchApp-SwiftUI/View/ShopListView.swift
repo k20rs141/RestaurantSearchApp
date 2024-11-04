@@ -6,74 +6,31 @@ struct ShopListView: View {
     var hotPepperModel = HotPepperModel()
 
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { proxy in
             NavigationStack {
                 VStack {
-                    HeaderView(proxy: geometry)
+                    HeaderView(proxy: proxy)
                     VStack(alignment: .leading) {
                         ScrollView {
 //                            HStack {
                                 ScrollView(.horizontal) {
-                                    LazyHStack {
-                                        ForEach(0 ..< 5) { _ in
-                                            Circle()
-                                                .padding()
+                                    HStack {
+                                        ForEach(GenreCategory.allCases, id: \.self) { _ in
+                                            RoundedRectangle(cornerRadius: 4)
+                                                .frame(width: proxy.size.width * 0.3, height: 50)
                                         }
                                     }
 //                                    .background(.red)
                                 }
 //                            }
-                            .frame(width: geometry.size.width * 0.9, height: 100)
+                            .frame(width: proxy.size.width * 0.9, height: 100)
                             .background(.yellow)
-//                            Text("おすすめ")
+
                             LazyVStack {
                                 ForEach(0 ..< hotPepperModel.shops.count, id: \.self) { index in
-                                    NavigationLink {
-                                        ShopDetailView(model: hotPepperModel, section: index)
-                                    } label: {
-                                        VStack(spacing: 0) {
-                                            VStack {
-                                                if let imageUrl = URL(string: hotPepperModel.shops[index].photo?.pc.large ?? "na") {
-                                                    AsyncImage(url: imageUrl) { image in
-                                                        image
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fill)
-                                                            .frame(width: geometry.size.width * 0.9, height: 200)
-                                                            .clipped()
-//                                                            .clipShape(.rect(cornerRadius: 12))
-                                                    } placeholder: {
-                                                        ProgressView()
-                                                    }
-                                                }
-                                            }
-                                            .frame(width: geometry.size.width * 0.9, height: 200)
-                                            VStack(alignment: .leading, spacing: 5) {
-                                                Text(hotPepperModel.shops[index].name)
-                                                    .foregroundStyle(.black)
-                                                    .font(.system(size: 18))
-                                                    .fontWeight(.medium)
-                                                HStack {
-                                                    Image(systemName: "fork.knife")
-                                                    Text(hotPepperModel.shops[index].genre.name)
-                                                    Image(systemName: "yensign")
-                                                    Text(hotPepperModel.shops[index].budget.name)
-                                                }
-                                                .font(.system(size: 13))
-                                                .foregroundStyle(.gray)
-                                                HStack {
-                                                    Image(systemName: "mappin")
-                                                    Text(hotPepperModel.shops[index].mobileAccess)
-                                                }
-                                                .font(.system(size: 13))
-                                                .foregroundStyle(.gray)
-                                            }
-                                            .frame(width: geometry.size.width * 0.9, height: 100, alignment: .leading)
-                                            .padding(.leading)
-                                        }
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                    }
+                                    ShopListCell(proxy: proxy, index: index)
                                 }
-                                .frame(width: geometry.size.width * 0.9, height: 300)
+                                .frame(width: proxy.size.width * 0.9, height: 300)
                                 .background(.white)
                                 .clipShape(.rect(cornerRadius: 12))
                                 .shadow(radius: 20)
@@ -88,7 +45,7 @@ struct ShopListView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(.white)
                 .sheet(isPresented: $isModalSheet) {
-                    PickerView(isModalSheet: $isModalSheet)
+                    PickerView(isModalSheet: $isModalSheet, proxy: proxy.size)
                         .presentationDetents([.fraction(0.28)])
                 }
             }
@@ -110,9 +67,9 @@ struct ShopListView: View {
                         hotPepperModel.fetchGourmet()
                     }
                 if !searchText.isEmpty {
-                    Button(action: {
+                    Button {
                         self.searchText.removeAll()
-                    }){
+                    } label: {
                         Image(systemName: "multiply.circle.fill")
                             .foregroundColor(.gray)
                     }
@@ -132,6 +89,54 @@ struct ShopListView: View {
             }
         }
         .frame(width: proxy.size.width, height: 35, alignment: .center)
+    }
+
+    @ViewBuilder
+    private func ShopListCell(proxy: GeometryProxy, index: Int) -> some View {
+        NavigationLink {
+            ShopDetailView(model: hotPepperModel, section: index)
+        } label: {
+            VStack(spacing: 0) {
+                VStack {
+                    if let imageUrl = URL(string: hotPepperModel.shops[index].photo?.pc.large ?? "na") {
+                        AsyncImage(url: imageUrl) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: proxy.size.width * 0.9, height: 150)
+                                .clipped()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                    }
+                }
+                .frame(width: proxy.size.width * 0.9, height: 150)
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(hotPepperModel.shops[index].name)
+                        .foregroundStyle(.black)
+                        .font(.system(size: 18))
+                        .fontWeight(.medium)
+                    HStack {
+                        Image(systemName: "fork.knife")
+                        Text(hotPepperModel.shops[index].genre.name)
+                        Image(systemName: "yensign")
+                        Text(hotPepperModel.shops[index].budget.name)
+                    }
+                    .font(.system(size: 13))
+                    .foregroundStyle(.gray)
+                    HStack {
+                        Image(systemName: "mappin")
+                        Text(hotPepperModel.shops[index].mobileAccess)
+                    }
+                    .font(.system(size: 13))
+                    .foregroundStyle(.gray)
+                }
+//                .frame(maxWidth: .infinity)
+                .frame(height: 100, alignment: .leading)
+                .padding(.leading)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        }
     }
 }
 

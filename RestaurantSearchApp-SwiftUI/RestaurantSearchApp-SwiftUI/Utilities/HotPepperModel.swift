@@ -1,6 +1,6 @@
 import Observation
 
-@Observable
+@MainActor @Observable
 final class HotPepperModel {
     let locationManager = LocationManager.shared
     var shops = [Shop]()
@@ -34,10 +34,10 @@ final class HotPepperModel {
                         self.shops = shops
                     }
                 } else if let error = response.results.error {
-
+                    
                 }
             } catch {
-                APIError.invalidURL
+                throw APIError.invalidURL
             }
         }
     }

@@ -1,10 +1,10 @@
 import MapKit
 
 final class LocationManager: NSObject, CLLocationManagerDelegate {
-    static let shared = LocationManager()
-    let locationManager = CLLocationManager()
-    var userLocation: CLLocation?
-    var denied = false
+    @MainActor static let shared = LocationManager()
+    private let locationManager = CLLocationManager()
+    private(set) var userLocation: CLLocation?
+    private var denied = false
 
     override init() {
         super.init()
