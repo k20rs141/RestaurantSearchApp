@@ -18,6 +18,7 @@
 		9F29A44F2A3DFA2600E264EE /* GourmetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29A44E2A3DFA2600E264EE /* GourmetResponse.swift */; };
 		9F29A4512A3DFA3000E264EE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29A4502A3DFA3000E264EE /* APIError.swift */; };
 		9F29A4532A3DFA6300E264EE /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29A4522A3DFA6300E264EE /* APIKey.swift */; };
+		9FA923752CD7D5C900B7F821 /* GenreCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA923742CD7D5C900B7F821 /* GenreCategory.swift */; };
 		9FDEFE962A4183850041B655 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEFE952A4183840041B655 /* Haptics.swift */; };
 		9FDEFE982A418B370041B655 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEFE972A418B370041B655 /* SearchView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		9F29A44E2A3DFA2600E264EE /* GourmetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetResponse.swift; sourceTree = "<group>"; };
 		9F29A4502A3DFA3000E264EE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		9F29A4522A3DFA6300E264EE /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		9FA923742CD7D5C900B7F821 /* GenreCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCategory.swift; sourceTree = "<group>"; };
 		9FDEFE952A4183840041B655 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		9FDEFE972A418B370041B655 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				9F29A44E2A3DFA2600E264EE /* GourmetResponse.swift */,
+				9FA923742CD7D5C900B7F821 /* GenreCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F29A44D2A3DFA0200E264EE /* HotPepperAPIService.swift in Sources */,
+				9FA923752CD7D5C900B7F821 /* GenreCategory.swift in Sources */,
 				9F29A4372A3DF86700E264EE /* RestaurantSearchApp_SwiftUIApp.swift in Sources */,
 				9F29A4492A3DF99A00E264EE /* HotPepperModel.swift in Sources */,
 				9F29A44F2A3DFA2600E264EE /* GourmetResponse.swift in Sources */,
